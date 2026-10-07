@@ -1,0 +1,68 @@
+{
+ "scorer": "APauli/Persuasive_language_in_pairs",
+ "dataset": "APauli/Persuasive-Pairs",
+ "n_pairs": 2697,
+ "seed": 20261002,
+ "validates": "our CALL of the frozen scorer: column choice, pair orientation, and the two-order arithmetic in _score_pair",
+ "does_not_validate": [
+  "generalisation - the checkpoint was fitted on this dataset, so this is in-sample while the paper's 0.845 is 10-fold cross-validated",
+  "the study's own distribution - we score model rewrites of human texts, not this dataset's human/LLM paraphrase pairs"
+ ],
+ "rho_scorer_human": 0.9637,
+ "rho_scorer_human_ci": [
+  0.9589,
+  0.9682
+ ],
+ "paper_rho": 0.845,
+ "rho_length_human": 0.381,
+ "paper_length_baseline": 0.388,
+ "annotator_agreement": {
+  "mean_pairwise_rho": 0.6152,
+  "pairwise": [
+   0.6174,
+   0.65,
+   0.5783
+  ],
+  "mean_label_reliability": 0.8275,
+  "attainable_ceiling": 0.9097,
+  "note": "pairwise = how well two annotators agree. mean_label_reliability = Spearman-Brown of that to the 3-rater mean, which is the actual target. attainable_ceiling = its square root: the highest correlation ANY predictor could have with labels this noisy. Compare 0.845 against the ceiling, not 1."
+ },
+ "by_source": {
+  "ElecDeb60to20": {
+   "n": 442,
+   "rho": 0.9651
+  },
+  "PT-Corpus": {
+   "n": 786,
+   "rho": 0.9589
+  },
+  "PersuasionForGood": {
+   "n": 440,
+   "rho": 0.9646
+  },
+  "Webis-Clickbait-17": {
+   "n": 582,
+   "rho": 0.9663
+  },
+  "Winning-Arguments": {
+   "n": 447,
+   "rho": 0.9568
+  }
+ },
+ "by_generator": {
+  "GPT4": {
+   "n": 1349,
+   "rho": 0.9565
+  },
+  "LLaMA3": {
+   "n": 900,
+   "rho": 0.9783
+  },
+  "Mixtral8x7b": {
+   "n": 448,
+   "rho": 0.9226
+  }
+ },
+ "verdict": "wiring confirmed by the training-free length baseline",
+ "in_sample_note": "rho(scorer, human) = 0.964 is IN-SAMPLE and is NOT comparable with the paper's held-out 0.845; the gap is the expected train/test difference, not a better result."
+}

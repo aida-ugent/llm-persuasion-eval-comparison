@@ -1,0 +1,26 @@
+# What is held constant across methods: the persuadee and judge, the seed, temperatures,
+# the served context, and the refusal policy used by the analysis.
+
+persuadee: gpt-4.1-mini
+judge: gpt-4o
+
+pinned_reasoning: none
+
+seed: 20261002
+
+pinned_temperature: 0.0
+pinned_temperature_exceptions: {openai2024_makemepay: 1.0, ahnert2025: 0.6, amayuelas2024: provider_default}
+
+served_context: 32768
+
+refusal_policy: floor_non_attempts
+report_sensitivity: true
+
+split_half:
+  n_splits: 100
+  spearman_brown: true
+  split_on: sampling_unit
+
+disattenuation:
+  report: descriptive_only
+  cap: 1.0

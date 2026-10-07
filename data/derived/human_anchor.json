@@ -1,0 +1,170 @@
+{
+ "source": "methods/elaraby2024/repo/data/annotated_data/annotated_rationale_pairs.json",
+ "validates": "the judge substitution only (methods.yaml deviation `judge`, severity green)",
+ "does_not_validate": "the winner-in-prompt task deviation, which changed the generation stage",
+ "feeds_nothing": "independent of checks.json `validity_bound`, which is anchored on pauli2025's published 0.845 and never reads this file; item-level agreement and a model-ranking bound cannot be chained",
+ "n_items": 211,
+ "n_topics": 7,
+ "dropped": [
+  {
+   "item_id": 103,
+   "model_decision": "argument 3",
+   "persuasive_rationale": "equally persuasive"
+  }
+ ],
+ "human_label_counts": {
+  "[1]": 87,
+  "[2]": 91,
+  "EQUAL": 33
+ },
+ "majority_class_baseline": 0.4313,
+ "judges": {
+  "study": {
+   "alias": "gpt-4o",
+   "role": "the pinned study judge",
+   "unparsed_calls": 0,
+   "order_disagreement": 0.0948,
+   "per_call": {
+    "n": 422,
+    "accuracy": 0.7512,
+    "kappa": 0.5694881660254167,
+    "bootstrap_topic": {
+     "n_units": 7,
+     "accuracy_ci": [
+      0.6931,
+      0.7847
+     ],
+     "kappa_ci": [
+      0.453,
+      0.6266
+     ]
+    },
+    "bootstrap_item": {
+     "n_units": 422,
+     "accuracy_ci": [
+      0.7109,
+      0.7915
+     ],
+     "kappa_ci": [
+      0.5064,
+      0.6322
+     ]
+    }
+   },
+   "consensus": {
+    "n": 211,
+    "accuracy": 0.7725,
+    "kappa": 0.6216095045953822,
+    "bootstrap_topic": {
+     "n_units": 7,
+     "accuracy_ci": [
+      0.7006,
+      0.8267
+     ],
+     "kappa_ci": [
+      0.4845,
+      0.7109
+     ]
+    },
+    "bootstrap_item": {
+     "n_units": 211,
+     "accuracy_ci": [
+      0.7156,
+      0.8246
+     ],
+     "kappa_ci": [
+      0.5258,
+      0.7026
+     ]
+    }
+   }
+  },
+  "upstream": {
+   "alias": "gpt-4-turbo",
+   "role": "upstream's judge, elaraby2024",
+   "unparsed_calls": 1,
+   "order_disagreement": 0.1991,
+   "per_call": {
+    "n": 421,
+    "accuracy": 0.6936,
+    "kappa": 0.4787303476474766,
+    "bootstrap_topic": {
+     "n_units": 7,
+     "accuracy_ci": [
+      0.6476,
+      0.7282
+     ],
+     "kappa_ci": [
+      0.3901,
+      0.5367
+     ]
+    },
+    "bootstrap_item": {
+     "n_units": 421,
+     "accuracy_ci": [
+      0.6508,
+      0.7363
+     ],
+     "kappa_ci": [
+      0.4135,
+      0.5455
+     ]
+    }
+   },
+   "consensus": {
+    "n": 210,
+    "accuracy": 0.6619,
+    "kappa": 0.46025195482189396,
+    "bootstrap_topic": {
+     "n_units": 7,
+     "accuracy_ci": [
+      0.6061,
+      0.7094
+     ],
+     "kappa_ci": [
+      0.38,
+      0.5315
+     ]
+    },
+    "bootstrap_item": {
+     "n_units": 210,
+     "accuracy_ci": [
+      0.5952,
+      0.7286
+     ],
+     "kappa_ci": [
+      0.3593,
+      0.5569
+     ]
+    }
+   }
+  }
+ },
+ "seed": 20261002,
+ "judge_vs_judge": {
+  "n": 210,
+  "agreement": 0.7143,
+  "kappa": 0.5325022261798753,
+  "note": "consensus verdicts, same items; this is the ceiling any human agreement can be read against"
+ },
+ "paired_difference": {
+  "n_items": 210,
+  "n_units": 7,
+  "kappa_study": 0.6199,
+  "kappa_upstream": 0.4603,
+  "kappa_difference": 0.1596,
+  "kappa_difference_ci": [
+   0.0075,
+   0.2607
+  ],
+  "accuracy_study": 0.7714,
+  "accuracy_upstream": 0.6619,
+  "accuracy_difference": 0.1095,
+  "accuracy_difference_ci": [
+   0.0199,
+   0.1746
+  ],
+  "excludes_zero": true,
+  "note": "consensus verdicts on identical items; positive favours the pinned study judge. Bootstrap over topic, of which there are seven."
+ }
+}

@@ -1,0 +1,650 @@
+{
+ "policy": "floor_non_attempts",
+ "axes": {
+  "construct": {
+   "labels": {
+    "pauli2025": "argument",
+    "elaraby2024": "argument",
+    "bozdag2025": "belief_change",
+    "ju2025": "belief_change",
+    "liu2025": "belief_change",
+    "openai2024_makemepay": "behavioural",
+    "openai2024_makemesay": "behavioural",
+    "ahnert2025": "belief_change",
+    "amayuelas2024": "belief_change"
+   },
+   "n_within_pairs": 12,
+   "n_between_pairs": 24,
+   "n_within_computed": 12,
+   "n_between_computed": 24,
+   "within": {
+    "mean_rho": 0.14351744453019366,
+    "ci": {
+     "lo": 0.05324329651864515,
+     "hi": 0.2141970825534854,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.2792366391006225,
+    "ci": {
+     "lo": 0.20247879144399591,
+     "hi": 0.32021728868474275,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": -0.13571919457042886,
+    "ci": {
+     "lo": -0.1812249239462318,
+     "hi": -0.07231969250524309,
+     "n": 500
+    }
+   },
+   "groups": {
+    "argument": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.6892857142857143
+    },
+    "behavioural": {
+     "methods": [
+      "openai2024_makemepay",
+      "openai2024_makemesay"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.12153713521550322
+    },
+    "belief_change": {
+     "methods": [
+      "bozdag2025",
+      "ju2025",
+      "liu2025",
+      "ahnert2025",
+      "amayuelas2024"
+     ],
+     "n_pairs": 10,
+     "mean_within_rho": 0.07639559124830343
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "taxonomy_family": {
+   "labels": {
+    "pauli2025": "dataset",
+    "elaraby2024": "dataset",
+    "bozdag2025": "dialogue",
+    "ju2025": "dialogue",
+    "liu2025": "dialogue",
+    "openai2024_makemepay": "dialogue",
+    "openai2024_makemesay": "dialogue",
+    "ahnert2025": "dialogue",
+    "amayuelas2024": "debate"
+   },
+   "n_within_pairs": 16,
+   "n_between_pairs": 20,
+   "n_within_computed": 16,
+   "n_between_computed": 20,
+   "within": {
+    "mean_rho": 0.1607185113059894,
+    "ci": {
+     "lo": 0.08470862915709497,
+     "hi": 0.219204949662809,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.292441956788977,
+    "ci": {
+     "lo": 0.19932490913204443,
+     "hi": 0.3401472762248224,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": -0.1317234454829876,
+    "ci": {
+     "lo": -0.18479229872702121,
+     "hi": -0.04191564016322705,
+     "n": 500
+    }
+   },
+   "groups": {
+    "dataset": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.6892857142857143
+    },
+    "debate": {
+     "methods": [
+      "amayuelas2024"
+     ],
+     "n_pairs": 0,
+     "mean_within_rho": null
+    },
+    "dialogue": {
+     "methods": [
+      "bozdag2025",
+      "ju2025",
+      "liu2025",
+      "openai2024_makemepay",
+      "openai2024_makemesay",
+      "ahnert2025"
+     ],
+     "n_pairs": 15,
+     "mean_within_rho": 0.11596876000899474
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "evaluator": {
+   "labels": {
+    "pauli2025": "supervised",
+    "elaraby2024": "llm_judge",
+    "bozdag2025": "self_reported",
+    "ju2025": "self_reported",
+    "liu2025": "llm_judge",
+    "openai2024_makemepay": "rule_based",
+    "openai2024_makemesay": "rule_based",
+    "ahnert2025": "self_reported",
+    "amayuelas2024": "ground_truth"
+   },
+   "n_within_pairs": 5,
+   "n_between_pairs": 31,
+   "n_within_computed": 5,
+   "n_between_computed": 31,
+   "within": {
+    "mean_rho": 0.14118115938251066,
+    "ci": {
+     "lo": 0.021283823876537787,
+     "hi": 0.21203969947287743,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.24970442625573347,
+    "ci": {
+     "lo": 0.17412415199398018,
+     "hi": 0.29238628588294996,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": -0.1085232668732228,
+    "ci": {
+     "lo": -0.19547395298382614,
+     "hi": -0.031149080963597225,
+     "n": 500
+    }
+   },
+   "groups": {
+    "ground_truth": {
+     "methods": [
+      "amayuelas2024"
+     ],
+     "n_pairs": 0,
+     "mean_within_rho": null
+    },
+    "llm_judge": {
+     "methods": [
+      "elaraby2024",
+      "liu2025"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.4892857142857143
+    },
+    "rule_based": {
+     "methods": [
+      "openai2024_makemepay",
+      "openai2024_makemesay"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.12153713521550322
+    },
+    "self_reported": {
+     "methods": [
+      "bozdag2025",
+      "ju2025",
+      "ahnert2025"
+     ],
+     "n_pairs": 3,
+     "mean_within_rho": 0.01779513906435514
+    },
+    "supervised": {
+     "methods": [
+      "pauli2025"
+     ],
+     "n_pairs": 0,
+     "mean_within_rho": null
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "grouping": {
+   "labels": {
+    "pauli2025": "message_property",
+    "elaraby2024": "message_property",
+    "bozdag2025": "receiver_effect",
+    "ju2025": "receiver_effect",
+    "liu2025": "receiver_effect",
+    "openai2024_makemepay": "receiver_effect",
+    "openai2024_makemesay": "receiver_effect",
+    "ahnert2025": "receiver_effect",
+    "amayuelas2024": "receiver_effect"
+   },
+   "n_within_pairs": 22,
+   "n_between_pairs": 14,
+   "n_within_computed": 22,
+   "n_between_computed": 14,
+   "within": {
+    "mean_rho": 0.15340753193906578,
+    "ci": {
+     "lo": 0.08502845694433474,
+     "hi": 0.21828091219327106,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.3562922333523532,
+    "ci": {
+     "lo": 0.2616476252780755,
+     "hi": 0.38332448043975265,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": -0.20288470141328743,
+    "ci": {
+     "lo": -0.2245782118551907,
+     "hi": -0.11113628162937317,
+     "n": 500
+    }
+   },
+   "groups": {
+    "message_property": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.6892857142857143
+    },
+    "receiver_effect": {
+     "methods": [
+      "bozdag2025",
+      "ju2025",
+      "liu2025",
+      "openai2024_makemepay",
+      "openai2024_makemesay",
+      "ahnert2025",
+      "amayuelas2024"
+     ],
+     "n_pairs": 21,
+     "mean_within_rho": 0.12108054660629233
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "task_type": {
+   "labels": {
+    "pauli2025": "shift_stance",
+    "elaraby2024": "shift_stance",
+    "bozdag2025": "shift_stance",
+    "ju2025": "accept_falsehood",
+    "liu2025": "comply",
+    "openai2024_makemepay": "comply",
+    "openai2024_makemesay": "comply",
+    "ahnert2025": "comply",
+    "amayuelas2024": "accept_falsehood"
+   },
+   "n_within_pairs": 10,
+   "n_between_pairs": 26,
+   "n_within_computed": 10,
+   "n_between_computed": 26,
+   "within": {
+    "mean_rho": 0.3940950322517803,
+    "ci": {
+     "lo": 0.29000456204233666,
+     "hi": 0.442145577230801,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.1695874686418814,
+    "ci": {
+     "lo": 0.085625424641374,
+     "hi": 0.23032962465973136,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": 0.22450756360989887,
+    "ci": {
+     "lo": 0.13470417207655633,
+     "hi": 0.3113477284998023,
+     "n": 500
+    }
+   },
+   "groups": {
+    "accept_falsehood": {
+     "methods": [
+      "ju2025",
+      "amayuelas2024"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.24642857142857144
+    },
+    "comply": {
+     "methods": [
+      "liu2025",
+      "openai2024_makemepay",
+      "openai2024_makemesay",
+      "ahnert2025"
+     ],
+     "n_pairs": 6,
+     "mean_within_rho": 0.23948708216835854
+    },
+    "shift_stance": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024",
+      "bozdag2025"
+     ],
+     "n_pairs": 3,
+     "mean_within_rho": 0.6731424590468295
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "legitimacy": {
+   "labels": {
+    "pauli2025": "honest",
+    "elaraby2024": "honest",
+    "bozdag2025": "honest",
+    "ju2025": "deception",
+    "liu2025": "honest",
+    "openai2024_makemepay": "deception",
+    "openai2024_makemesay": "deception",
+    "ahnert2025": "honest",
+    "amayuelas2024": "deception"
+   },
+   "n_within_pairs": 16,
+   "n_between_pairs": 20,
+   "n_within_computed": 16,
+   "n_between_computed": 20,
+   "within": {
+    "mean_rho": 0.3968752907296803,
+    "ci": {
+     "lo": 0.2813544008765746,
+     "hi": 0.43744100049169604,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.09470157478411474,
+    "ci": {
+     "lo": 0.020711352769465695,
+     "hi": 0.1709772942848061,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": 0.3021737159455656,
+    "ci": {
+     "lo": 0.17404134303437718,
+     "hi": 0.3699683454527747,
+     "n": 500
+    }
+   },
+   "groups": {
+    "deception": {
+     "methods": [
+      "ju2025",
+      "openai2024_makemepay",
+      "openai2024_makemesay",
+      "amayuelas2024"
+     ],
+     "n_pairs": 6,
+     "mean_within_rho": 0.07366578530259107
+    },
+    "honest": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024",
+      "bozdag2025",
+      "liu2025",
+      "ahnert2025"
+     ],
+     "n_pairs": 10,
+     "mean_within_rho": 0.5564081812122577
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "stake": {
+   "labels": {
+    "pauli2025": "none",
+    "elaraby2024": "none",
+    "bozdag2025": "none",
+    "ju2025": "truth",
+    "liu2025": "personal",
+    "openai2024_makemepay": "money",
+    "openai2024_makemesay": "none",
+    "ahnert2025": "personal",
+    "amayuelas2024": "truth"
+   },
+   "n_within_pairs": 8,
+   "n_between_pairs": 28,
+   "n_within_computed": 8,
+   "n_between_computed": 28,
+   "within": {
+    "mean_rho": 0.5233442064358973,
+    "ci": {
+     "lo": 0.43380429438782464,
+     "hi": 0.5502073329619532,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.14088526245718178,
+    "ci": {
+     "lo": 0.05861248179361285,
+     "hi": 0.20238876172230155,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": 0.3824589439787155,
+    "ci": {
+     "lo": 0.28150034736923024,
+     "hi": 0.4635551428685097,
+     "n": 500
+    }
+   },
+   "groups": {
+    "money": {
+     "methods": [
+      "openai2024_makemepay"
+     ],
+     "n_pairs": 0,
+     "mean_within_rho": null
+    },
+    "none": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024",
+      "bozdag2025",
+      "openai2024_makemesay"
+     ],
+     "n_pairs": 6,
+     "mean_within_rho": 0.5938952044763124
+    },
+    "personal": {
+     "methods": [
+      "liu2025",
+      "ahnert2025"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.28571428571428575
+    },
+    "truth": {
+     "methods": [
+      "ju2025",
+      "amayuelas2024"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.24642857142857144
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "domain": {
+   "labels": {
+    "pauli2025": "politics_society",
+    "elaraby2024": "politics_society",
+    "bozdag2025": "politics_society",
+    "ju2025": "factual_knowledge",
+    "liu2025": "everyday_life",
+    "openai2024_makemepay": "open_conversation",
+    "openai2024_makemesay": "open_conversation",
+    "ahnert2025": "everyday_life",
+    "amayuelas2024": "factual_knowledge"
+   },
+   "n_within_pairs": 6,
+   "n_between_pairs": 30,
+   "n_within_computed": 6,
+   "n_between_computed": 30,
+   "within": {
+    "mean_rho": 0.47731952467134625,
+    "ci": {
+     "lo": 0.36910873055194093,
+     "hi": 0.5177124240291809,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.18135925015827967,
+    "ci": {
+     "lo": 0.10280372271262748,
+     "hi": 0.23456948339898856,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": 0.2959602745130666,
+    "ci": {
+     "lo": 0.1987804449353523,
+     "hi": 0.3836776246113054,
+     "n": 500
+    }
+   },
+   "groups": {
+    "everyday_life": {
+     "methods": [
+      "liu2025",
+      "ahnert2025"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.28571428571428575
+    },
+    "factual_knowledge": {
+     "methods": [
+      "ju2025",
+      "amayuelas2024"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.24642857142857144
+    },
+    "open_conversation": {
+     "methods": [
+      "openai2024_makemepay",
+      "openai2024_makemesay"
+     ],
+     "n_pairs": 1,
+     "mean_within_rho": 0.12153713521550322
+    },
+    "politics_society": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024",
+      "bozdag2025"
+     ],
+     "n_pairs": 3,
+     "mean_within_rho": 0.6731424590468295
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  },
+  "speech_act": {
+   "labels": {
+    "pauli2025": "assertive",
+    "elaraby2024": "assertive",
+    "bozdag2025": "assertive",
+    "ju2025": "assertive",
+    "liu2025": "commissive",
+    "openai2024_makemepay": "commissive",
+    "openai2024_makemesay": "commissive",
+    "ahnert2025": "commissive",
+    "amayuelas2024": "assertive"
+   },
+   "n_within_pairs": 16,
+   "n_between_pairs": 20,
+   "n_within_computed": 16,
+   "n_between_computed": 20,
+   "within": {
+    "mean_rho": 0.23572171938452505,
+    "ci": {
+     "lo": 0.1637469105146748,
+     "hi": 0.29050255139588305,
+     "n": 500
+    }
+   },
+   "between": {
+    "mean_rho": 0.23430759206347126,
+    "ci": {
+     "lo": 0.13736958131077362,
+     "hi": 0.2812548337711044,
+     "n": 500
+    }
+   },
+   "difference": {
+    "point": 0.001414127321053782,
+    "ci": {
+     "lo": -0.04185507392155398,
+     "hi": 0.07566411165773207,
+     "n": 500
+    }
+   },
+   "groups": {
+    "assertive": {
+     "methods": [
+      "pauli2025",
+      "elaraby2024",
+      "bozdag2025",
+      "ju2025",
+      "amayuelas2024"
+     ],
+     "n_pairs": 10,
+     "mean_within_rho": 0.2334590917760213
+    },
+    "commissive": {
+     "methods": [
+      "liu2025",
+      "openai2024_makemepay",
+      "openai2024_makemesay",
+      "ahnert2025"
+     ],
+     "n_pairs": 6,
+     "mean_within_rho": 0.23948708216835854
+    }
+   },
+   "note": "descriptive only - no test (group sizes 1-6)"
+  }
+ }
+}

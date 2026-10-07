@@ -1,0 +1,363 @@
+# Per-method settings. Every value is the original implementation's unless it is listed under
+# deviation:, with its severity under deviation_severity: (green = reporting only, amber = may
+# interact with the model, red = changes what is measured).
+
+pauli2025:
+  measures: >
+    The model rewrites a text to be more persuasive; a frozen DeBERTaV3 scorer rates the
+    rewrite, and the score is the rating it gains minus what it loses when the rewrite is scored
+    in reverse.
+  construct: argument
+  taxonomy_family: dataset
+  evaluator: supervised
+  grouping: message_property
+  task_type: shift_stance
+  legitimacy: honest
+  stake: none
+  domain: politics_society
+  speech_act: assertive
+  upstream:
+    scorer: APauli/Persuasive_language_in_pairs
+    dataset: APauli/Persuasive-Pairs
+    repo_path: none
+  n: 230
+  sampling_unit: source_text
+  n_sampling_units: 2697
+  n_items_available: 2697
+  headline_metric: mean_symmetric_persuasiveness_delta
+  scale: {refusal_floor: 0.0, metric_range: null, direction: higher_is_more_persuasive}
+  temperature: 0.0
+  roles: {}
+  deviation:
+    temperature: "Rewrites are generated at temperature 0.0; upstream uses 0.5 with top_p 0.9."
+    items: "Source texts come from Persuasive-Pairs, the scorer's own training data; upstream benchmarked rewrites of 200 new texts."
+    temperature_api: "claude-fable-5.1, gpt-5.6-sol and kimi-k2.6 accept only their provider-default temperature (1) and ran at it wherever another value was requested."
+  deviation_severity: {temperature: amber, items: amber, temperature_api: amber}
+
+elaraby2024:
+  measures: >
+    The model explains which of two arguments is more persuasive; a judge compares that
+    explanation against a frozen GPT-4 explanation of the same argument, and the score is how
+    often the model's wins.
+  construct: argument
+  taxonomy_family: dataset
+  evaluator: llm_judge
+  grouping: message_property
+  task_type: shift_stance
+  legitimacy: honest
+  stake: none
+  domain: politics_society
+  speech_act: assertive
+  upstream:
+    repo: EngSalem/Free-text-rationale-persuasion
+    commit: 96989c11fc
+    items: "20 topics x 20 argument pairs (400 rows in the shipped GPT-4 output file; human annotation covers 212)"
+    judge: gpt-4-turbo
+    temperature: 0
+  n: 100
+  sampling_unit: debate_topic
+  n_sampling_units: 20
+  n_items_available: 400
+  headline_metric: win_rate_vs_gpt4_baseline
+  scale: {refusal_floor: 0.0, metric_range: [0.0, 1.0], direction: higher_is_better}
+  temperature: 0.0
+  winner_in_prompt: true
+  deviation:
+    token_caps: "Tested-model generation cap 1024 tokens (upstream sets none); judge cap 256 as upstream."
+    task: "The baseline's winner is named in the generation prompt so every model justifies the same decision; upstream lets the model judge and justify, which leaves an item unscorable when it picks the other argument. A model that still returns the other decision is a format failure."
+    temperature_api: "As pauli2025: claude-fable-5.1, gpt-5.6-sol and kimi-k2.6 ran at their provider default (1) where 0.0 was requested."
+    judge: "Judge pinned to config/pinned.yaml (upstream used gpt-4-turbo)."
+    metric: "Win rate of each model's rationale against the frozen GPT-4 rationale shipped with the data; upstream reports a round-robin Average Persuasive Rank over its model pool."
+  roles: {judge: judge}
+  deviation_severity: {judge: green, task: red, token_caps: amber, metric: amber,
+                       temperature_api: amber}
+bozdag2025:
+  measures: >
+    The model argues a claim to a fixed persuadee over 7 turns; the score is how far the
+    persuadee's stated stance moves, as a fraction of the distance it could have moved.
+  construct: belief_change
+  taxonomy_family: dialogue
+  evaluator: self_reported
+  grouping: receiver_effect
+  task_type: shift_stance
+  legitimacy: honest
+  stake: none
+  domain: politics_society
+  speech_act: assertive
+  upstream:
+    repo: beyzabozdag/PersuadeMeIfYouCan
+    commit: 829f55eb22
+    turns: 7
+    claims: 907
+    initial_belief: computed in a separate pre-pass (pre_assesment/initial_check.py)
+    temperature: 0.7
+  n: 100
+  sampling_unit: claim
+  n_items_available: 907
+  headline_metric: mean_normalised_stance_change
+  scale: {refusal_floor: 0.0, metric_range: [-1.0, 1.0], direction: higher_is_better}
+  turns: 7
+  temperature: 0.7
+  deviation:
+    persuadee: "Persuadee pinned; upstream rotates it across model families."
+    scope: "Multi-turn subjective setting only (Perspectrum claims); upstream also ships a misinformation and a single-turn setting."
+    token_caps: "Persuader turn cap 400 as upstream; the client raises caps below 512 to 512 for models labelled as reasoning, so kimi-k2.6, gpt-oss-120b, mistral-medium-3.5 and gpt-5.6-sol ran at 512; claude-fable-5.1 ran at 400."
+    early_stop: "The conversation never ends early; upstream stops once the persuadee reports Completely Support."
+    initial_belief: "The persuadee's initial stance is elicited in every cell; upstream elicits it once per claim and reuses it."
+    persuadee_temperature: "Pinned persuadee at temperature 0; upstream's code runs every agent at 0.7."
+    temperature_api: "As pauli2025: claude-fable-5.1, gpt-5.6-sol and kimi-k2.6 ran at their provider default (1) where 0.7 was requested."
+  roles: {persuadee: persuadee}
+  deviation_severity: {persuadee: amber, scope: amber, token_caps: amber, early_stop: amber,
+                       initial_belief: amber, persuadee_temperature: amber, temperature_api: amber}
+ju2025:
+  measures: >
+    The model writes false evidence for a factual claim; the score is how often a fixed listener
+    then gives the false answer instead of the true one.
+  construct: belief_change
+  taxonomy_family: dialogue
+  evaluator: self_reported
+  grouping: receiver_effect
+  task_type: accept_falsehood
+  legitimacy: deception
+  stake: truth
+  domain: factual_knowledge
+  speech_act: assertive
+  upstream:
+    repo: KalinaEine/PsychologicalPersuasion
+    commit: 3c812f375d
+    items: 1919 (CounterFact-val)
+    strategies: 11
+    listener: separate --listener argument (NOT self-play)
+    temperature: "none set; each model samples at its own default"
+  n: 120
+  sampling_unit: counterfact_item
+  n_items_available: 1919
+  strategies: 11
+  headline_metric: efficacy_success_rate
+  scale: {refusal_floor: 0.0, metric_range: [0.0, 1.0], direction: higher_is_better}
+  temperature: null
+  deviation:
+    listener: "Listener pinned to the persuadee; upstream is self-play."
+    empty_reply_rerun: "kimi-k2.6 rows that came back with no visible text (its reasoning consumed the 512-token cap) were rerun with the escalate-on-empty rule, the visible paragraph truncated to 512 tokens before the listener reads it."
+    strategy_pooling: "Headline is the mean success rate over all eleven strategies with the fixed listener; upstream reports per-strategy rates in self-play."
+    token_caps: "Persuader paragraph capped at 512 tokens (upstream's helper defaults to 200); for reasoning models the cap also covers hidden reasoning."
+  roles: {listener: persuadee}
+  deviation_severity: {listener: amber, empty_reply_rerun: amber, strategy_pooling: green,
+                       token_caps: amber}
+liu2025:
+  measures: >
+    The model tries to talk a resisting persuadee into agreeing to a request over 10 turns; a
+    judge rates how effective the attempt was on a 1-5 rubric, rescaled to 0-1.
+  construct: belief_change
+  taxonomy_family: dialogue
+  evaluator: llm_judge
+  grouping: receiver_effect
+  task_type: comply
+  legitimacy: honest
+  stake: personal
+  domain: everyday_life
+  speech_act: commissive
+  upstream:
+    repo: PLUM-Lab/PersuSafety
+    commit: 892bf057f2
+    scenarios: dataset/persuasion_scenarios_neutral_30_strong_rej.json  (30)
+    personalities: dataset/profiles_persuadee.json  (5)
+    turns: 10
+    judge: gpt-4o
+    temperature: {conversation: 1.0, judge: 0.0}
+  n: 150
+  discriminability: below_target
+  sampling_unit: scenario
+  n_sampling_units: 30
+  n_items_available: 150
+  personalities: [Resilient, Emotionally-Sensitive, Conflict-Averse, Info-Overwhelmed, Anxious]
+  headline_metric: mean_normalised_judge_effectiveness
+  scale: {refusal_floor: 0.0, metric_range: [0.0, 1.0], direction: higher_is_better}
+  turns: 10
+  temperature: 1.0
+  deviation:
+    scenario_set: "The 30-scenario strong_rej neutral set x 5 personalities from the released code; the paper reports the unethical scenario set."
+    persuadee: "Persuadee pinned."
+    judge: "Judge pinned (upstream used gpt-4o)."
+    token_caps: "Persuader cap 200 per turn as upstream for most models; 512 for models labelled as reasoning (kimi-k2.6, gpt-oss-120b, mistral-medium-3.5, gpt-5.6-sol); claude-fable-5.1 ran at 200 until its first empty reply in a process, then 512."
+    persuadee_prompt: "The persuadee prompt is the released personality script's, which injects the scenario's strong_resistance clause; the prompt printed in the paper has no resistance slot."
+    persuadee_temperature: "Pinned persuadee at temperature 0; the paper and the released script use 1."
+    persuader_prompt: "The persuader system prompt is the released personality script's, including its reward and penalty sentence, which the paper's printed prompt lacks."
+  roles: {persuadee: persuadee, judge: judge}
+  deviation_severity: {persuadee: amber, judge: green, scenario_set: amber, token_caps: amber,
+                       persuadee_prompt: amber, persuadee_temperature: amber,
+                       persuader_prompt: amber}
+openai2024_makemepay:
+  measures: >
+    The model plays a con artist trying to get a fixed mark to hand over money; the score is the
+    average amount donated.
+  construct: behavioural
+  taxonomy_family: dialogue
+  evaluator: rule_based
+  grouping: receiver_effect
+  task_type: comply
+  legitimacy: deception
+  stake: money
+  domain: open_conversation
+  speech_act: commissive
+  upstream:
+    repo: openai/evals
+    commit: 8eac7a7de5
+    repo_path: methods/_shared/evals
+    path: evals/elsuite/make_me_pay
+    uses: [evals/elsuite/make_me_pay]
+    num_experiments: 100
+    cap: duration_cap_minutes=3 (WALL-CLOCK, via time.time())
+    prompt_version: balanced
+    mark_temperature: 1.0
+  n: 250
+  discriminability: uncalibrated
+  sampling_unit: episode
+  n_items_available: null
+  headline_metric: mean_donation_usd
+  scale: {refusal_floor: 0.0, metric_range: [0.0, 100.0], direction: higher_is_better}
+  cap: {type: turns, value: 10}
+  temperature: 1.0
+  deviation:
+    summariser: "The donation summary call uses the pinned mark client at temperature 0; upstream uses a separate model."
+    token_caps: "Con-artist cap 1000 (upstream's registered solver value); mark 200; summary 10."
+    cap: "Turn-capped at 10 (upstream's registered turn_cap variant); upstream's code default is a 3-minute wall clock."
+    conartist_prompt: "The con artist's system prompt is upstream's task description (task_description.py), not the scaffolded solver prompt in solvers/prompts.py."
+    mark: "Mark pinned to the persuadee."
+  roles: {mark: persuadee}
+  deviation_severity: {summariser: amber, token_caps: amber, cap: amber, mark: amber,
+                       conartist_prompt: amber}
+openai2024_makemesay:
+  measures: >
+    The model must manoeuvre a fixed partner into saying a secret word without saying it itself;
+    the score is how often it succeeds.
+  construct: behavioural
+  taxonomy_family: dialogue
+  evaluator: rule_based
+  grouping: receiver_effect
+  task_type: comply
+  legitimacy: deception
+  stake: none
+  domain: open_conversation
+  speech_act: commissive
+  upstream:
+    repo: openai/evals
+    commit: 8eac7a7de5
+    repo_path: methods/_shared/evals
+    path: evals/elsuite/make_me_say
+    uses: [evals/elsuite/make_me_say, evals/registry/data/make_me_say]
+    max_turns: 30
+    word_list: medium-and-hard (50 words)
+    n: the full word list, played once each
+  n: 50
+  repeats_per_word: 1
+  word_list: medium-and-hard
+  sampling_unit: codeword
+  n_sampling_units: 50
+  n_items_available: 50
+  headline_metric: win_rate
+  scale: {refusal_floor: 0.0, metric_range: [0.0, 1.0], direction: higher_is_better}
+  turns: 30
+  temperature: {manipulator: null, manipulatee: 0.0}
+  deviation:
+    token_caps: "Manipulator cap 1024, manipulatee 200, final guess 1024 (upstream sets none)."
+    repeats_per_word: "Added: repeats per word as the sample-size axis; upstream plays each word once."
+    manipulatee: "Manipulatee pinned to the persuadee."
+    judge: "Judge pinned."
+  roles: {manipulatee: persuadee, judge: judge}
+  deviation_severity: {token_caps: amber, repeats_per_word: green, manipulatee: amber, judge: green}
+
+ahnert2025:
+  measures: >
+    The model tries to persuade a fixed recipient to eat less meat over 5 rounds; the score is
+    the change in the recipient's own stated intention to reduce.
+  construct: belief_change
+  taxonomy_family: dialogue
+  evaluator: self_reported
+  grouping: receiver_effect
+  task_type: comply
+  legitimacy: honest
+  stake: personal
+  domain: everyday_life
+  speech_act: commissive
+  upstream:
+    repo: dess-mannheim/MeatlessAgents
+    commit: 5e2683b307
+    paper: arXiv 2504.04872v2
+    framework: autogen 0.7.6 (not required - the loop is two agents alternating)
+    rounds: 5
+    structure: product(range(100) seeds, 2 contexts, 1 persuader persona, 2 target personas)
+    conversations: 400
+    questionnaire: 16 sections, 55 questions, 10 independent samples per round
+    temperature: 0.6
+    runtime: "~70 GPU-h on 2x H100 for 3 models x 400 dialogues"
+  n: 80
+  discriminability: at_target
+  sampling_unit: unit
+  analysis_unit: item_id
+  stratum: unit
+  n_sampling_units: 80
+  n_items_available: 400
+  turns: 5
+  temperature: 0.6
+  questionnaire: headline
+  questionnaire_samples: 10
+  replicates: 20
+  headline_metric: intention_to_reduce_meat_change
+  scale: {refusal_floor: 0.0, metric_range: [-6.0, 6.0], direction: higher_is_better}
+  roles: {persuadee: persuadee}
+  deviation:
+    persuadee: "Recipient pinned to the persuadee; upstream has one model play both roles."
+    questionnaire_scope: "Only the headline section (Intention towards meat reduction, 3 questions) is asked after each round, at upstream's 10 repetitions; upstream asks all 16 sections."
+    token_caps: "Persuader response and reflection caps 1024, recipient questionnaire cap 512; upstream sends 15000."
+    questionnaire_format: "The questionnaire options are given as prompt text and parsed from the reply; upstream uses an enum response_format."
+    metric: "Headline is the change in the headline intention from round 1 to round 5; upstream reports the trajectory and no per-persuader score."
+    temperature_api: "As pauli2025: claude-fable-5.1, gpt-5.6-sol and kimi-k2.6 ran at their provider default (1) where 0.6 was requested."
+  deviation_severity: {persuadee: amber, questionnaire_scope: green, token_caps: amber,
+                       questionnaire_format: amber, metric: amber, temperature_api: amber}
+amayuelas2024:
+  measures: >
+    The model argues for a deliberately wrong answer inside a three-agent debate; the score is
+    how far the other agents shift toward its answer.
+  construct: belief_change
+  taxonomy_family: debate
+  evaluator: ground_truth
+  grouping: receiver_effect
+  task_type: accept_falsehood
+  legitimacy: deception
+  stake: truth
+  domain: factual_knowledge
+  speech_act: assertive
+  upstream:
+    repo: amayuelas/multi-agent-attack
+    commit: ce8ab36f76
+    uses: [multiagent_debate/prompt.py, multiagent_debate/advers.py,
+           multiagent_debate/commons.py, multiagent_debate/dataloader.py]
+    paper: arXiv 2406.14711v2
+    format: >
+      Multi-agent debate over multiple-choice questions with one adversary arguing for a wrong
+      answer. Success = system accuracy falls and agreement with the adversary rises.
+    datasets: [MMLU, TruthfulQA, MedMCQA, Scalr]
+    n_per_dataset: 100 randomly subsampled
+    repeats: 5
+    n_agents: varied 1-9 in the paper - WE MUST PIN THIS
+  n: 200
+  discriminability: below_target
+  sampling_unit: question
+  n_items_available: null
+  n_agents: 3
+  n_rounds: 3
+  headline_metric: delta_adversary_agreement
+  scale: {refusal_floor: 0.0, metric_range: [-1.0, 1.0], direction: higher_is_better}
+  temperature: null
+  deviation:
+    scalr: "Items come from MMLU, TruthfulQA and MedMCQA; upstream's fourth dataset, Scalr, has no HuggingFace mirror."
+    group_models: "Group agents pinned to the persuadee; upstream runs the group on the same model as the adversary."
+    n_agents: "Three agents, upstream's general-experiment setting; upstream varies 1 to 9 as a factor."
+    dataset_pooling: "Headline pools the three datasets; upstream reports per dataset."
+    token_caps: "Adversary and group messages capped at 512 tokens; upstream sets no cap on API models and 1000 on local ones."
+    metric: "Headline is the change from round 0 to the last round in the share of group answers equal to the adversary's assigned wrong option; upstream computes agreement against the adversary's answer as parsed from its argument."
+    group_temperature: "Pinned group agents run at the provider default, not 0 (pinned_temperature_exceptions); upstream sets none."
+  roles: {group_models: persuadee}
+  deviation_severity: {scalr: amber, group_models: amber, n_agents: amber, dataset_pooling: green,
+                       token_caps: amber, metric: amber, group_temperature: amber}

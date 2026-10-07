@@ -1,0 +1,179 @@
+# The fifteen tested models (ten served locally with vLLM, five via API) and the pinned agents.
+# route: api under a local model means the provider's API served it instead.
+
+defaults:
+  served_context: 32768
+  dtype: auto
+
+local:
+
+  llama-3.2-3b:
+    id: meta-llama/Llama-3.2-3B-Instruct
+    family: Llama
+    lab: Meta
+    country: US
+    released: 2024-09
+    params: 3B
+    native_context: 131072
+    reasoning: none
+
+  qwen2.5-7b:
+    id: Qwen/Qwen2.5-7B-Instruct
+    family: Qwen
+    lab: Alibaba
+    country: CN
+    released: 2024-09
+    params: 7B
+    native_context: 32768
+    reasoning: none
+
+  mistral-7b-v0.2:
+    id: mistralai/Mistral-7B-Instruct-v0.2
+    strict_alternation: true
+    family: Mistral
+    lab: Mistral
+    country: FR
+    released: 2023-12
+    params: 7B
+    native_context: 32768
+    reasoning: none
+
+  gemma-3-12b:
+    id: google/gemma-3-12b-it
+    strict_alternation: true
+    family: Gemma
+    lab: Google
+    country: US
+    released: 2025-03
+    params: 12B
+    native_context: 131072
+    reasoning: none
+  mistral-nemo-12b:
+    id: mistralai/Mistral-Nemo-Instruct-2407
+    strict_alternation: true
+    family: Mistral
+    lab: Mistral
+    country: FR
+    released: 2024-07
+    params: 12B
+    native_context: 131072
+    reasoning: none
+
+  gemma-3-27b:
+    id: google/gemma-3-27b-it
+    strict_alternation: true
+    family: Gemma
+    lab: Google
+    country: US
+    released: 2025-03
+    params: 27B
+    native_context: 131072
+    reasoning: none
+
+  qwen3-32b:
+    id: Qwen/Qwen3-32B
+    family: Qwen
+    lab: Alibaba
+    country: CN
+    released: 2025-04
+    params: 32B
+    native_context: 40960
+    reasoning: "off"
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+  exaone-4.0.1-32b:
+    id: LGAI-EXAONE/EXAONE-4.0.1-32B
+    family: EXAONE
+    lab: LG
+    country: KR
+    released: 2025-07
+    params: 32B
+    native_context: 131072
+    reasoning: "off"
+  llama-3.3-70b:
+    id: meta-llama/Llama-3.3-70B-Instruct
+    family: Llama
+    lab: Meta
+    country: US
+    released: 2024-12
+    params: 70B
+    native_context: 131072
+    reasoning: none
+
+  gpt-oss-120b:
+    id: openai/gpt-oss-120b
+    family: OpenAI-oss
+    lab: OpenAI
+    country: US
+    released: 2025-08
+    params: 120B
+    native_context: 131072
+    reasoning: provider_default
+  mistral-medium-3.5:
+    id: mistralai/Mistral-Medium-3.5-128B
+    family: Mistral
+    lab: Mistral
+    country: FR
+    released: 2026-05
+    params: 128B
+    native_context: 262144
+    reasoning: provider_default
+    quantization: fp8
+    route: api
+    api:
+      provider: mistral
+      id: mistral-medium-2604
+api:
+
+  deepseek-v4-flash:
+    id: deepseek-v4-flash
+    served: DeepSeek-V4.1-Flash
+    provider: deepseek
+    family: DeepSeek
+    country: CN
+    released: 2026-09
+    params: 552B MoE
+    reasoning: "off"
+    extra_body: {thinking: {type: disabled}}
+    weights: open
+
+  kimi-k2.6:
+    id: kimi-k2.6
+    provider: moonshot
+    family: Kimi
+    country: CN
+    released: 2026-04
+    params: 1T MoE
+    reasoning: native
+    weights: open
+  claude-fable-5.1:
+    id: claude-fable-5-1
+    provider: anthropic
+    family: Claude
+    country: US
+    released: 2026-09
+    reasoning: provider_default
+    weights: closed
+
+  gpt-5.6-sol:
+    id: gpt-5.6-sol
+    provider: openai
+    family: GPT
+    country: US
+    released: 2026
+    reasoning: provider_default
+    weights: closed
+
+pinned_agents:
+
+  gpt-4.1-mini:
+    id: gpt-4.1-mini-2025-04-14
+    provider: openai
+    reasoning: none
+  gpt-4o:
+    id: gpt-4o-2024-11-20
+    provider: openai
+    reasoning: none
+  claude-haiku-4.5:
+    id: claude-haiku-4-5-20251001
+    provider: anthropic
+    reasoning: none

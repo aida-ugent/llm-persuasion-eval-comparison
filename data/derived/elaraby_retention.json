@@ -1,0 +1,27 @@
+{
+ "n": 40,
+ "per_model": {
+  "gpt-5.6-sol": {
+   "n": 40,
+   "usable": 40,
+   "agree": 28,
+   "p": 0.7,
+   "refused": 0
+  },
+  "deepseek-v4-flash": {
+   "n": 40,
+   "usable": 38,
+   "agree": 26,
+   "p": 0.6842105263157895,
+   "refused": 0
+  },
+  "kimi-k2.6": {
+   "n": 40,
+   "usable": 30,
+   "agree": 24,
+   "p": 0.8,
+   "refused": 0
+  }
+ },
+ "observed_intersection": 17
+}

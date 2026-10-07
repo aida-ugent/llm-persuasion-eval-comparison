@@ -1,0 +1,513 @@
+{
+ "generated": "2026-09-20T16:13:15+00:00",
+ "judge2": {
+  "alias": "claude-haiku-4.5",
+  "id": "claude-haiku-4-5-20251001",
+  "served": "claude-haiku-4-5-20251001",
+  "temperature": "provider default"
+ },
+ "judge1": "gpt-4o",
+ "settings": {
+  "n_bootstrap": 1000,
+  "seed": 20261002,
+  "limit": null,
+  "tag": null
+ },
+ "methods": {
+  "elaraby2024": {
+   "status": "ok",
+   "models": [
+    "claude-fable-5.1",
+    "deepseek-v4-flash",
+    "exaone-4.0.1-32b",
+    "gemma-3-12b",
+    "gemma-3-27b",
+    "gpt-5.6-sol",
+    "gpt-oss-120b",
+    "kimi-k2.6",
+    "llama-3.2-3b",
+    "llama-3.3-70b",
+    "mistral-7b-v0.2",
+    "mistral-medium-3.5",
+    "mistral-nemo-12b",
+    "qwen2.5-7b",
+    "qwen3-32b"
+   ],
+   "n_models": 15,
+   "n_units": 19,
+   "n_pairs": 2628,
+   "kappa": 0.6449830619818706,
+   "kappa_type": "cohen_unweighted",
+   "kappa_ci95": [
+    0.6127566723235136,
+    0.6832781596117224
+   ],
+   "rho_rankings": 0.9678571428571429,
+   "rho_ci95": [
+    0.8821428571428571,
+    0.9714285714285714
+   ],
+   "n_bootstrap_valid": {
+    "kappa": 1000,
+    "rho": 1000
+   },
+   "model_means": {
+    "claude-fable-5.1": {
+     "judge1": 0.9782608695652174,
+     "judge2": 0.9755434782608695
+    },
+    "deepseek-v4-flash": {
+     "judge1": 0.9526315789473684,
+     "judge2": 0.9631578947368421
+    },
+    "exaone-4.0.1-32b": {
+     "judge1": 0.5108695652173914,
+     "judge2": 0.5516304347826086
+    },
+    "gemma-3-12b": {
+     "judge1": 0.8682795698924731,
+     "judge2": 0.9005376344086021
+    },
+    "gemma-3-27b": {
+     "judge1": 0.9277777777777778,
+     "judge2": 0.9638888888888889
+    },
+    "gpt-5.6-sol": {
+     "judge1": 0.7989130434782609,
+     "judge2": 0.9429347826086957
+    },
+    "gpt-oss-120b": {
+     "judge1": 0.9850746268656716,
+     "judge2": 0.9776119402985075
+    },
+    "kimi-k2.6": {
+     "judge1": 0.9941860465116279,
+     "judge2": 0.9854651162790697
+    },
+    "llama-3.2-3b": {
+     "judge1": 0.5168539325842697,
+     "judge2": 0.5196629213483146
+    },
+    "llama-3.3-70b": {
+     "judge1": 0.5543478260869565,
+     "judge2": 0.6141304347826086
+    },
+    "mistral-7b-v0.2": {
+     "judge1": 0.4152542372881356,
+     "judge2": 0.5127118644067796
+    },
+    "mistral-medium-3.5": {
+     "judge1": 0.8494623655913979,
+     "judge2": 0.8494623655913979
+    },
+    "mistral-nemo-12b": {
+     "judge1": 0.7472826086956522,
+     "judge2": 0.6847826086956522
+    },
+    "qwen2.5-7b": {
+     "judge1": 0.275,
+     "judge2": 0.39166666666666666
+    },
+    "qwen3-32b": {
+     "judge1": 0.904891304347826,
+     "judge2": 0.8668478260869565
+    }
+   }
+  },
+  "liu2025": {
+   "status": "ok",
+   "models": [
+    "claude-fable-5.1",
+    "deepseek-v4-flash",
+    "exaone-4.0.1-32b",
+    "gemma-3-12b",
+    "gemma-3-27b",
+    "gpt-5.6-sol",
+    "gpt-oss-120b",
+    "kimi-k2.6",
+    "llama-3.2-3b",
+    "llama-3.3-70b",
+    "mistral-7b-v0.2",
+    "mistral-medium-3.5",
+    "mistral-nemo-12b",
+    "qwen2.5-7b",
+    "qwen3-32b"
+   ],
+   "n_models": 15,
+   "n_units": 30,
+   "n_pairs": 2181,
+   "kappa": 0.6862498525964313,
+   "kappa_type": "cohen_quadratic_weighted",
+   "kappa_ci95": [
+    0.6330190601289376,
+    0.7271507528717434
+   ],
+   "rho_rankings": 0.7327974329170048,
+   "rho_ci95": [
+    0.5178571428571429,
+    0.8857142857142857
+   ],
+   "n_bootstrap_valid": {
+    "kappa": 1000,
+    "rho": 1000
+   },
+   "model_means": {
+    "claude-fable-5.1": {
+     "judge1": 3.993333333333333,
+     "judge2": 3.6
+    },
+    "deepseek-v4-flash": {
+     "judge1": 3.486666666666667,
+     "judge2": 3.2733333333333334
+    },
+    "exaone-4.0.1-32b": {
+     "judge1": 2.9591836734693877,
+     "judge2": 2.945578231292517
+    },
+    "gemma-3-12b": {
+     "judge1": 3.5866666666666664,
+     "judge2": 3.28
+    },
+    "gemma-3-27b": {
+     "judge1": 3.3866666666666667,
+     "judge2": 3.16
+    },
+    "gpt-5.6-sol": {
+     "judge1": 3.52,
+     "judge2": 3.26
+    },
+    "gpt-oss-120b": {
+     "judge1": 3.3333333333333335,
+     "judge2": 2.990740740740741
+    },
+    "kimi-k2.6": {
+     "judge1": 3.422818791946309,
+     "judge2": 2.771812080536913
+    },
+    "llama-3.2-3b": {
+     "judge1": 3.406896551724138,
+     "judge2": 3.089655172413793
+    },
+    "llama-3.3-70b": {
+     "judge1": 3.6933333333333334,
+     "judge2": 3.26
+    },
+    "mistral-7b-v0.2": {
+     "judge1": 3.389261744966443,
+     "judge2": 3.261744966442953
+    },
+    "mistral-medium-3.5": {
+     "judge1": 3.433333333333333,
+     "judge2": 3.2066666666666666
+    },
+    "mistral-nemo-12b": {
+     "judge1": 3.074324324324324,
+     "judge2": 2.918918918918919
+    },
+    "qwen2.5-7b": {
+     "judge1": 3.0425531914893615,
+     "judge2": 3.099290780141844
+    },
+    "qwen3-32b": {
+     "judge1": 3.2708333333333335,
+     "judge2": 3.0833333333333335
+    }
+   }
+  },
+  "bozdag2025": {
+   "status": "ok",
+   "models": [
+    "claude-fable-5.1",
+    "deepseek-v4-flash",
+    "exaone-4.0.1-32b",
+    "gemma-3-12b",
+    "gemma-3-27b",
+    "gpt-5.6-sol",
+    "gpt-oss-120b",
+    "kimi-k2.6",
+    "llama-3.2-3b",
+    "llama-3.3-70b",
+    "mistral-7b-v0.2",
+    "mistral-medium-3.5",
+    "mistral-nemo-12b",
+    "qwen2.5-7b",
+    "qwen3-32b"
+   ],
+   "n_models": 15,
+   "n_units": 98,
+   "n_pairs": 1470,
+   "kappa": 0.9013695493333842,
+   "kappa_type": "cohen_quadratic_weighted",
+   "kappa_ci95": [
+    0.8784200192613602,
+    0.9206897201072117
+   ],
+   "rho_rankings": 0.9919431011827867,
+   "rho_ci95": [
+    0.9660107334525939,
+    0.9991067439039163
+   ],
+   "n_bootstrap_valid": {
+    "kappa": 1000,
+    "rho": 1000
+   },
+   "model_means": {
+    "claude-fable-5.1": {
+     "judge1": 4.928571428571429,
+     "judge2": 4.887755102040816
+    },
+    "deepseek-v4-flash": {
+     "judge1": 4.683673469387755,
+     "judge2": 4.551020408163265
+    },
+    "exaone-4.0.1-32b": {
+     "judge1": 4.1020408163265305,
+     "judge2": 3.857142857142857
+    },
+    "gemma-3-12b": {
+     "judge1": 4.326530612244898,
+     "judge2": 4.010204081632653
+    },
+    "gemma-3-27b": {
+     "judge1": 4.63265306122449,
+     "judge2": 4.459183673469388
+    },
+    "gpt-5.6-sol": {
+     "judge1": 4.928571428571429,
+     "judge2": 4.887755102040816
+    },
+    "gpt-oss-120b": {
+     "judge1": 4.704081632653061,
+     "judge2": 4.622448979591836
+    },
+    "kimi-k2.6": {
+     "judge1": 4.76530612244898,
+     "judge2": 4.622448979591836
+    },
+    "llama-3.2-3b": {
+     "judge1": 3.5,
+     "judge2": 3.173469387755102
+    },
+    "llama-3.3-70b": {
+     "judge1": 4.561224489795919,
+     "judge2": 4.357142857142857
+    },
+    "mistral-7b-v0.2": {
+     "judge1": 3.693877551020408,
+     "judge2": 3.295918367346939
+    },
+    "mistral-medium-3.5": {
+     "judge1": 4.530612244897959,
+     "judge2": 4.387755102040816
+    },
+    "mistral-nemo-12b": {
+     "judge1": 3.8877551020408165,
+     "judge2": 3.663265306122449
+    },
+    "qwen2.5-7b": {
+     "judge1": 4.112244897959184,
+     "judge2": 3.7755102040816326
+    },
+    "qwen3-32b": {
+     "judge1": 4.418367346938775,
+     "judge2": 4.224489795918367
+    }
+   }
+  },
+  "openai2024_makemepay": {
+   "status": "ok",
+   "models": [
+    "claude-fable-5.1",
+    "deepseek-v4-flash",
+    "exaone-4.0.1-32b",
+    "gemma-3-12b",
+    "gemma-3-27b",
+    "gpt-5.6-sol",
+    "gpt-oss-120b",
+    "kimi-k2.6",
+    "llama-3.2-3b",
+    "llama-3.3-70b",
+    "mistral-7b-v0.2",
+    "mistral-medium-3.5",
+    "mistral-nemo-12b",
+    "qwen2.5-7b",
+    "qwen3-32b"
+   ],
+   "n_models": 15,
+   "n_units": 124,
+   "n_pairs": 1860,
+   "kappa": 0.9008548002558586,
+   "kappa_type": "cohen_quadratic_weighted",
+   "kappa_ci95": [
+    0.8881790701773857,
+    0.912164645350974
+   ],
+   "rho_rankings": 0.9857142857142858,
+   "rho_ci95": [
+    0.9607142857142857,
+    0.9964285714285714
+   ],
+   "n_bootstrap_valid": {
+    "kappa": 1000,
+    "rho": 1000
+   },
+   "model_means": {
+    "claude-fable-5.1": {
+     "judge1": 1.1935483870967742,
+     "judge2": 1.1129032258064515
+    },
+    "deepseek-v4-flash": {
+     "judge1": 3.7016129032258065,
+     "judge2": 3.6451612903225805
+    },
+    "exaone-4.0.1-32b": {
+     "judge1": 2.0483870967741935,
+     "judge2": 1.7903225806451613
+    },
+    "gemma-3-12b": {
+     "judge1": 3.3951612903225805,
+     "judge2": 3.2096774193548385
+    },
+    "gemma-3-27b": {
+     "judge1": 3.3870967741935485,
+     "judge2": 3.4274193548387095
+    },
+    "gpt-5.6-sol": {
+     "judge1": 1.1451612903225807,
+     "judge2": 1.032258064516129
+    },
+    "gpt-oss-120b": {
+     "judge1": 1.0,
+     "judge2": 1.0
+    },
+    "kimi-k2.6": {
+     "judge1": 3.0806451612903225,
+     "judge2": 3.161290322580645
+    },
+    "llama-3.2-3b": {
+     "judge1": 2.370967741935484,
+     "judge2": 2.4596774193548385
+    },
+    "llama-3.3-70b": {
+     "judge1": 3.6774193548387095,
+     "judge2": 3.6370967741935485
+    },
+    "mistral-7b-v0.2": {
+     "judge1": 2.032258064516129,
+     "judge2": 2.088709677419355
+    },
+    "mistral-medium-3.5": {
+     "judge1": 2.6129032258064515,
+     "judge2": 2.4838709677419355
+    },
+    "mistral-nemo-12b": {
+     "judge1": 2.185483870967742,
+     "judge2": 2.2016129032258065
+    },
+    "qwen2.5-7b": {
+     "judge1": 2.596774193548387,
+     "judge2": 2.564516129032258
+    },
+    "qwen3-32b": {
+     "judge1": 3.217741935483871,
+     "judge2": 3.129032258064516
+    }
+   }
+  },
+  "openai2024_makemesay": {
+   "status": "ok",
+   "models": [
+    "deepseek-v4-flash",
+    "exaone-4.0.1-32b",
+    "gemma-3-12b",
+    "gemma-3-27b",
+    "gpt-5.6-sol",
+    "gpt-oss-120b",
+    "kimi-k2.6",
+    "llama-3.2-3b",
+    "llama-3.3-70b",
+    "mistral-7b-v0.2",
+    "mistral-medium-3.5",
+    "mistral-nemo-12b",
+    "qwen2.5-7b",
+    "qwen3-32b"
+   ],
+   "n_models": 14,
+   "n_units": 40,
+   "n_pairs": 560,
+   "kappa": 0.6264245344204578,
+   "kappa_type": "cohen_unweighted",
+   "kappa_ci95": [
+    0.5515418162170507,
+    0.6937110649658855
+   ],
+   "rho_rankings": 0.9933920704845814,
+   "rho_ci95": [
+    0.9161147902869758,
+    0.9966856913317639
+   ],
+   "n_bootstrap_valid": {
+    "kappa": 1000,
+    "rho": 1000
+   },
+   "model_means": {
+    "deepseek-v4-flash": {
+     "judge1": 0.7,
+     "judge2": 0.5
+    },
+    "exaone-4.0.1-32b": {
+     "judge1": 0.275,
+     "judge2": 0.225
+    },
+    "gemma-3-12b": {
+     "judge1": 0.35,
+     "judge2": 0.325
+    },
+    "gemma-3-27b": {
+     "judge1": 0.6,
+     "judge2": 0.475
+    },
+    "gpt-5.6-sol": {
+     "judge1": 0.8,
+     "judge2": 0.775
+    },
+    "gpt-oss-120b": {
+     "judge1": 0.675,
+     "judge2": 0.5
+    },
+    "kimi-k2.6": {
+     "judge1": 0.8,
+     "judge2": 0.675
+    },
+    "llama-3.2-3b": {
+     "judge1": 0.15,
+     "judge2": 0.125
+    },
+    "llama-3.3-70b": {
+     "judge1": 0.425,
+     "judge2": 0.375
+    },
+    "mistral-7b-v0.2": {
+     "judge1": 0.0,
+     "judge2": 0.0
+    },
+    "mistral-medium-3.5": {
+     "judge1": 0.9,
+     "judge2": 0.85
+    },
+    "mistral-nemo-12b": {
+     "judge1": 0.25,
+     "judge2": 0.25
+    },
+    "qwen2.5-7b": {
+     "judge1": 0.05,
+     "judge2": 0.05
+    },
+    "qwen3-32b": {
+     "judge1": 0.525,
+     "judge2": 0.425
+    }
+   }
+  }
+ }
+}

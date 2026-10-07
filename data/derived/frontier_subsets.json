@@ -1,0 +1,5897 @@
+{
+ "rule": "floor_non_attempts",
+ "api_models": [
+  "mistral-medium-3.5",
+  "deepseek-v4-flash",
+  "kimi-k2.6",
+  "claude-fable-5.1",
+  "gpt-5.6-sol"
+ ],
+ "local_models": [
+  "llama-3.2-3b",
+  "qwen2.5-7b",
+  "mistral-7b-v0.2",
+  "gemma-3-12b",
+  "mistral-nemo-12b",
+  "gemma-3-27b",
+  "qwen3-32b",
+  "exaone-4.0.1-32b",
+  "llama-3.3-70b",
+  "gpt-oss-120b"
+ ],
+ "api_capability_sd": 0.3493205056116634,
+ "n_local_subsets": 252,
+ "all_nine": {
+  "methods": [
+   "pauli2025",
+   "elaraby2024",
+   "bozdag2025",
+   "ju2025",
+   "liu2025",
+   "openai2024_makemepay",
+   "openai2024_makemesay",
+   "ahnert2025",
+   "amayuelas2024"
+  ],
+  "api_arm": {
+   "mean_rho": -0.08195743289609111,
+   "ci": {
+    "lo": -0.18265032446873716,
+    "hi": 0.09713169913011033,
+    "n": 500
+   }
+  },
+  "local_arm": {
+   "mean_rho": 0.3308321912072772
+  },
+  "local_subsets": {
+   "all": {
+    "n": 252,
+    "median": 0.4036880594833777,
+    "min": -0.03906639498075305,
+    "max": 0.7526258831719063,
+    "share_at_or_below_api": 0.0
+   },
+   "capability_matched": {
+    "n": 6,
+    "median": 0.17992785535912564,
+    "min": 0.007679433050841518,
+    "max": 0.43035941557610247,
+    "share_at_or_below_api": 0.0
+   }
+  },
+  "capability_windows": [
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b"
+    ],
+    "mean_C": -1.1277632039813235,
+    "mean_rho": 0.5797273770757365
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b"
+    ],
+    "mean_C": -0.6878796510178945,
+    "mean_rho": 0.622484100240468
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_C": -0.37211045104915896,
+    "mean_rho": 0.6013637728224269
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "qwen3-32b"
+    ],
+    "mean_C": -0.0712570182121044,
+    "mean_rho": 0.649712393704761
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "qwen3-32b",
+     "mistral-medium-3.5"
+    ],
+    "mean_C": 0.11864290326447338,
+    "mean_rho": 0.2138396041030321
+   },
+   {
+    "models": [
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "qwen3-32b",
+     "mistral-medium-3.5",
+     "gpt-oss-120b"
+    ],
+    "mean_C": 0.22791269563817615,
+    "mean_rho": 0.29301543644506345
+   },
+   {
+    "models": [
+     "exaone-4.0.1-32b",
+     "qwen3-32b",
+     "mistral-medium-3.5",
+     "gpt-oss-120b",
+     "llama-3.3-70b"
+    ],
+    "mean_C": 0.3033492547593486,
+    "mean_rho": 0.08156084566343695
+   },
+   {
+    "models": [
+     "qwen3-32b",
+     "mistral-medium-3.5",
+     "gpt-oss-120b",
+     "llama-3.3-70b",
+     "kimi-k2.6"
+    ],
+    "mean_C": 0.4288077346830336,
+    "mean_rho": 0.143244175614559
+   },
+   {
+    "models": [
+     "mistral-medium-3.5",
+     "gpt-oss-120b",
+     "llama-3.3-70b",
+     "kimi-k2.6",
+     "claude-fable-5.1"
+    ],
+    "mean_C": 0.582397589387638,
+    "mean_rho": 0.197663457265913
+   },
+   {
+    "models": [
+     "gpt-oss-120b",
+     "llama-3.3-70b",
+     "kimi-k2.6",
+     "claude-fable-5.1",
+     "gpt-5.6-sol"
+    ],
+    "mean_C": 0.7383788297988574,
+    "mean_rho": 0.125592259977208
+   },
+   {
+    "models": [
+     "llama-3.3-70b",
+     "kimi-k2.6",
+     "claude-fable-5.1",
+     "gpt-5.6-sol",
+     "deepseek-v4-flash"
+    ],
+    "mean_C": 0.8998505083431475,
+    "mean_rho": -0.03298698036757062
+   }
+  ],
+  "subsets": [
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b"
+    ],
+    "mean_rho": 0.5797273770757365,
+    "capability_sd": 0.7577611562258287
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.687430690550998,
+    "capability_sd": 0.8805816845924495
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.4965276547964899,
+    "capability_sd": 0.9533281287437586
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.47186818305584977,
+    "capability_sd": 0.9043732388553558
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5412886380984397,
+    "capability_sd": 0.9833614792559972
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.35643377785139435,
+    "capability_sd": 0.9641772216892813
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.6252870032127144,
+    "capability_sd": 0.8330782536881732
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.23992613019046782,
+    "capability_sd": 0.9282551821856708
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.12031372011866669,
+    "capability_sd": 0.8650140367520557
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.25005078233441286,
+    "capability_sd": 0.9657873505472696
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.07840187807836177,
+    "capability_sd": 0.9419091266131303
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5754974395634602,
+    "capability_sd": 0.9936705494998819
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4972683193584712,
+    "capability_sd": 0.9490285180706305
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.49450799740310103,
+    "capability_sd": 1.0213326710394832
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3821603173456353,
+    "capability_sd": 1.0036413632792673
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.22595347094697354,
+    "capability_sd": 1.0124539877413585
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.22692326904348795,
+    "capability_sd": 1.0769295637669754
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12349349761689621,
+    "capability_sd": 1.0610121731778706
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.1582576650282919,
+    "capability_sd": 1.0391484990197974
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": -0.03906639498075305,
+    "capability_sd": 1.0220673660643151
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.08669918556573733,
+    "capability_sd": 1.0854788523267234
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.622484100240468,
+    "capability_sd": 0.6330264179885348
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5684287834148446,
+    "capability_sd": 0.717331478935428
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4575465331856277,
+    "capability_sd": 0.6606544074670696
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4473068878681352,
+    "capability_sd": 0.751892250644679
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.45997640349815333,
+    "capability_sd": 0.7298372126620439
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6208328410420678,
+    "capability_sd": 0.5904024687188962
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6013637728224269,
+    "capability_sd": 0.5451213049842664
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5004236135998427,
+    "capability_sd": 0.6196808224754791
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5223168175262826,
+    "capability_sd": 0.600876598798033
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5348286566947725,
+    "capability_sd": 0.606439514414808
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.43135527669848783,
+    "capability_sd": 0.6684795288117993
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4040899547937966,
+    "capability_sd": 0.6524624363467451
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4181360091887432,
+    "capability_sd": 0.6342124195020611
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.36174458497489104,
+    "capability_sd": 0.6163524112843172
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3465136077611854,
+    "capability_sd": 0.6766939638756311
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5392258490004129,
+    "capability_sd": 0.7591697964524153
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.44821481602065366,
+    "capability_sd": 0.7088413844746001
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.39003457005931547,
+    "capability_sd": 0.7903735015245741
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3831578282175899,
+    "capability_sd": 0.7704208703893599
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.3242318481299622,
+    "capability_sd": 0.7792917582727298
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2659692710100408,
+    "capability_sd": 0.8495756112794147
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2630162444421385,
+    "capability_sd": 0.8321242395603875
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.20628251148525176,
+    "capability_sd": 0.8091195204114705
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.06255589425309754,
+    "capability_sd": 0.7900309997312123
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.20618193964955692,
+    "capability_sd": 0.858813417080935
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6439382801008762,
+    "capability_sd": 0.6264902073358852
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.506479730720344,
+    "capability_sd": 0.6818668702752976
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4464936213411363,
+    "capability_sd": 0.6673248267482763
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.48712497854760106,
+    "capability_sd": 0.6515523574153748
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4127290330926457,
+    "capability_sd": 0.6353920219135336
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.34705385024287266,
+    "capability_sd": 0.6892778107958955
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.36901735817533077,
+    "capability_sd": 0.6916491628837071
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3142601946932875,
+    "capability_sd": 0.6777721569520601
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2512955537548854,
+    "capability_sd": 0.7231907679750221
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2642883456495048,
+    "capability_sd": 0.6987015346575993
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.7526258831719063,
+    "capability_sd": 0.9093871645641071
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6579836457230271,
+    "capability_sd": 0.9914496798109675
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5206910107531729,
+    "capability_sd": 0.9365953704124759
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5731837836566318,
+    "capability_sd": 1.0245298331678274
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5252773772339446,
+    "capability_sd": 1.0034425164179108
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6577897221388478,
+    "capability_sd": 1.0225060724966724
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6543440924487032,
+    "capability_sd": 0.9830765256162862
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5941673776299703,
+    "capability_sd": 1.0473105177132915
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5481172049527757,
+    "capability_sd": 1.0314178542421695
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4929957138965135,
+    "capability_sd": 1.0388438527693842
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.49711676052270615,
+    "capability_sd": 1.0962961857693714
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.43217398798590123,
+    "capability_sd": 1.0819532252519004
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.49253931382069627,
+    "capability_sd": 1.0628097028111483
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4100897326931009,
+    "capability_sd": 1.0474466432865626
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4366998297377842,
+    "capability_sd": 1.1039663387445138
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5698740463987294,
+    "capability_sd": 1.0396490476522509
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5459404405440649,
+    "capability_sd": 0.9896090620186008
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4962328802160437,
+    "capability_sd": 1.07010889160713
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5253351881843638,
+    "capability_sd": 1.0506694008170958
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.2627371744678864,
+    "capability_sd": 1.0612780406285152
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3145957928837247,
+    "capability_sd": 1.1332991374691175
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.21200982484920516,
+    "capability_sd": 1.1157661359213409
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3015295388266983,
+    "capability_sd": 1.0906884242831125
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.09095947761556249,
+    "capability_sd": 1.0719099427601284
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.303776589286762,
+    "capability_sd": 1.1427927243857097
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5737708834712172,
+    "capability_sd": 1.0677270209158702
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5326554155692292,
+    "capability_sd": 1.1207436017145516
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.43036057919253035,
+    "capability_sd": 1.1074119923032824
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.533191882145007,
+    "capability_sd": 1.0899462790915175
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4094194869410752,
+    "capability_sd": 1.0756860799790582
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.40125075028622204,
+    "capability_sd": 1.127853803603944
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3107195432096069,
+    "capability_sd": 1.133131249720294
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1528630935338192,
+    "capability_sd": 1.1202223286525863
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1902624134457457,
+    "capability_sd": 1.1670906719084144
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.292161962153109,
+    "capability_sd": 1.1400079863540662
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5844270707285185,
+    "capability_sd": 0.7772170666216103
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5319946726072146,
+    "capability_sd": 0.7333692909465501
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5018811909385241,
+    "capability_sd": 0.8049964279085834
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.48379745181421513,
+    "capability_sd": 0.7871881623532455
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.46826378272866487,
+    "capability_sd": 0.7943671689516679
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.42454357578264207,
+    "capability_sd": 0.8564209492714793
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4787275439643036,
+    "capability_sd": 0.8407715394317539
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4721145164665929,
+    "capability_sd": 0.8209746288031302
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4784267724366698,
+    "capability_sd": 0.8039041185042316
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4309610181123764,
+    "capability_sd": 0.8646547895222604
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6203740139601884,
+    "capability_sd": 0.594168542999965
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3806907449647811,
+    "capability_sd": 0.6429955480839317
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.43731517344236204,
+    "capability_sd": 0.629770735153326
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.46913809515532184,
+    "capability_sd": 0.6169830956254291
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.45241018921956916,
+    "capability_sd": 0.6022114211218441
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4590405314262144,
+    "capability_sd": 0.6496106858323609
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.357829747182835,
+    "capability_sd": 0.6502886869603723
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.38735854781880696,
+    "capability_sd": 0.6376988450629167
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3452996434098438,
+    "capability_sd": 0.6769373498435565
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3893473041656434,
+    "capability_sd": 0.6565591694730024
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4539050088692724,
+    "capability_sd": 0.821639415528504
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.33018275736204095,
+    "capability_sd": 0.8780008117805401
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.43833242962797925,
+    "capability_sd": 0.8636336085789906
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3704001417036376,
+    "capability_sd": 0.8459583070925853
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3965715447993421,
+    "capability_sd": 0.8303286055298128
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3763100949454823,
+    "capability_sd": 0.8855326755977411
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2196397377059251,
+    "capability_sd": 0.8899890910073431
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2924363017874478,
+    "capability_sd": 0.8761704760479473
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2301075223797028,
+    "capability_sd": 0.9244707354421434
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.281567289928682,
+    "capability_sd": 0.8972218647105534
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.45633600946898606,
+    "capability_sd": 0.6505772249280249
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4456642765056066,
+    "capability_sd": 0.6391970051662359
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.39069782479165505,
+    "capability_sd": 0.6734342010372035
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3995810682485977,
+    "capability_sd": 0.6561683652819355
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.25595957873221653,
+    "capability_sd": 0.6766125829675622
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.6888841048977326,
+    "capability_sd": 0.9136896297220023
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.572108828257402,
+    "capability_sd": 0.9875230806293134
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4151883938115391,
+    "capability_sd": 0.9379170783847504
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4488247005417646,
+    "capability_sd": 1.017838774566431
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3864733884970111,
+    "capability_sd": 0.9984826500595002
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.7074272612316266,
+    "capability_sd": 0.9762573865315093
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6350676603770611,
+    "capability_sd": 0.9403443319082192
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5723983220015778,
+    "capability_sd": 0.9992618084162447
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.6087105383134791,
+    "capability_sd": 0.9844917257400784
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.45780027889344643,
+    "capability_sd": 0.9906514021398344
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.41003504401395263,
+    "capability_sd": 1.0430320277775027
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4303274431915676,
+    "capability_sd": 1.029761910552581
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.34791781742724,
+    "capability_sd": 1.0128490209779848
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3018470344646114,
+    "capability_sd": 0.9985887402697687
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.25288093847022725,
+    "capability_sd": 1.0500635755298522
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6272553917448802,
+    "capability_sd": 1.029425211088064
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5113687999629135,
+    "capability_sd": 0.9840835378351633
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.46379938218837796,
+    "capability_sd": 1.0573950007531583
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.46506275447900824,
+    "capability_sd": 1.0395160721649388
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.31983155517116785,
+    "capability_sd": 1.0487092238174949
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.18381985915264681,
+    "capability_sd": 1.1143176053083488
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2020416310765678,
+    "capability_sd": 1.098183585442554
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.13065776783151473,
+    "capability_sd": 1.0757259038651203
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.016448131150857886,
+    "capability_sd": 1.0584480306203081
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.10533862802108374,
+    "capability_sd": 1.1230108427602976
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6190996330484057,
+    "capability_sd": 1.0143231226191656
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.551107151347485,
+    "capability_sd": 1.0624186842212517
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5693832145258276,
+    "capability_sd": 1.0501261292102826
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5045807039024246,
+    "capability_sd": 1.0348421724944914
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4661895872824567,
+    "capability_sd": 1.021641962765392
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3829154698691745,
+    "capability_sd": 1.068907289543199
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.19939598362960984,
+    "capability_sd": 1.072980662710706
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1981091240183246,
+    "capability_sd": 1.0611010629647812
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.08337548720402639,
+    "capability_sd": 1.1031749048002746
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.07550989000752406,
+    "capability_sd": 1.079240767366521
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5819987314204398,
+    "capability_sd": 0.6862004942932349
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5135968878274626,
+    "capability_sd": 0.6441144754569553
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.37058144417135663,
+    "capability_sd": 0.7133926152180278
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5457067765482104,
+    "capability_sd": 0.6959247834398865
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.38083623318961535,
+    "capability_sd": 0.7017533630049709
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.26406385217694067,
+    "capability_sd": 0.7607576878637871
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.32897118087504656,
+    "capability_sd": 0.7456061464110729
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.18035760822593486,
+    "capability_sd": 0.7276970175152533
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.24521295637554796,
+    "capability_sd": 0.711014603693172
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.14109463844335118,
+    "capability_sd": 0.7686121739037003
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.649712393704761,
+    "capability_sd": 0.360285012396607
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.40328616417295876,
+    "capability_sd": 0.417215941012532
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5745256449983963,
+    "capability_sd": 0.40121487034943387
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4317295350665474,
+    "capability_sd": 0.3892842120303853
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4411724684438549,
+    "capability_sd": 0.3704982860053567
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.32095148342911917,
+    "capability_sd": 0.42480732251598635
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.16292291661348446,
+    "capability_sd": 0.4220605129930797
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1819285199497437,
+    "capability_sd": 0.4070084077616207
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12431052910545126,
+    "capability_sd": 0.44843844228565444
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12754792565839215,
+    "capability_sd": 0.4291514823402211
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5422203931420584,
+    "capability_sd": 0.7232887862338624
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4078270791351033,
+    "capability_sd": 0.7764004112191174
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4441095784037789,
+    "capability_sd": 0.7625690196145081
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3442221746809932,
+    "capability_sd": 0.7468639911404512
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.39797232681643546,
+    "capability_sd": 0.7316708849196543
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2857691398678884,
+    "capability_sd": 0.7835315208347494
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.1615264985246527,
+    "capability_sd": 0.7865281869241075
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.19610026161336344,
+    "capability_sd": 0.7732768175542758
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.11818214216139818,
+    "capability_sd": 0.8177929493887892
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.04350082993156938,
+    "capability_sd": 0.7933438301046548
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5297569808832832,
+    "capability_sd": 0.4063584397985601
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5195411068250888,
+    "capability_sd": 0.39266473507139704
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.34494757727738806,
+    "capability_sd": 0.42776540275496444
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3748888087778564,
+    "capability_sd": 0.4126435885042097
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1344662946267075,
+    "capability_sd": 0.426506785124992
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6476041236991944,
+    "capability_sd": 1.062390694883527
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6332743338339708,
+    "capability_sd": 1.0222646196297946
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5013865135761304,
+    "capability_sd": 1.087494045593002
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5839030121902328,
+    "capability_sd": 1.0714199383322593
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.42386269250675024,
+    "capability_sd": 1.0792333970302612
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3588108535437865,
+    "capability_sd": 1.1378101700721008
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3756159480910522,
+    "capability_sd": 1.123255693659752
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3300535930025038,
+    "capability_sd": 1.1035131615087692
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4069058404447918,
+    "capability_sd": 1.0879591992739779
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3430645491730327,
+    "capability_sd": 1.1456224976805605
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6936433900873528,
+    "capability_sd": 1.0151984088009276
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.400892189665236,
+    "capability_sd": 1.0575747922526528
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5248645376084823,
+    "capability_sd": 1.0465580615810164
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5040150233904083,
+    "capability_sd": 1.0335744396782574
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5806088934915131,
+    "capability_sd": 1.0217230587837611
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4138066232706384,
+    "capability_sd": 1.063335822249818
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.23123303728423036,
+    "capability_sd": 1.066308796255155
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.33211670426347906,
+    "capability_sd": 1.055675291284786
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.15295966465274288,
+    "capability_sd": 1.092457913999029
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.23600114984929269,
+    "capability_sd": 1.0718567427511807
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5100466592042721,
+    "capability_sd": 1.1097553588883424
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3872503943944324,
+    "capability_sd": 1.1639504575066377
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.439058022276247,
+    "capability_sd": 1.1503954463409358
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.41106396111984134,
+    "capability_sd": 1.132310697246024
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4837843071029793,
+    "capability_sd": 1.1178457326358031
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.42252241546360775,
+    "capability_sd": 1.1712092993882597
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.07327260187118137,
+    "capability_sd": 1.1769000511448233
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.18476886694087052,
+    "capability_sd": 1.1637608355769946
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.10350724992703496,
+    "capability_sd": 1.2119159767182575
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12693971740852555,
+    "capability_sd": 1.1839290874739554
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.46624818792013867,
+    "capability_sd": 1.0770932640452753
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4949876205965809,
+    "capability_sd": 1.0672878788416496
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2969064432929065,
+    "capability_sd": 1.1006697245980246
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.40462008715971876,
+    "capability_sd": 1.08217556747186
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.05983022967216253,
+    "capability_sd": 1.1067441950062793
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4064436123333509,
+    "capability_sd": 0.7032162980881631
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.16514375691082506,
+    "capability_sd": 0.749745730644841
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3448331025676954,
+    "capability_sd": 0.737306232266486
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2420050559626506,
+    "capability_sd": 0.7244126607800796
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.434945052740836,
+    "capability_sd": 0.7107025214951458
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.20861585593853918,
+    "capability_sd": 0.7560634912729546
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.0901408726871558,
+    "capability_sd": 0.7575906656627058
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.20974262419379844,
+    "capability_sd": 0.7456956301496102
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.09737957056964598,
+    "capability_sd": 0.7841204070811801
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.10953078794786358,
+    "capability_sd": 0.7636103438623283
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.1868637490393203,
+    "capability_sd": 0.2393051033202461
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.43035941557610247,
+    "capability_sd": 0.22161510199555814
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1132971189497649,
+    "capability_sd": 0.2566426845474337
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.17299196167893097,
+    "capability_sd": 0.24658422218079376
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.007679433050841518,
+    "capability_sd": 0.24654863879048053
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.25954790726669574,
+    "capability_sd": 0.7617655521644712
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.378548917789601,
+    "capability_sd": 0.7509612225687199
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.23090664134444047,
+    "capability_sd": 0.784908944319868
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.23201655505563873,
+    "capability_sd": 0.7671737276458358
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.0307447082101576,
+    "capability_sd": 0.7891551620074186
+   },
+   {
+    "models": [
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.24809292669398617,
+    "capability_sd": 0.15801973114706921
+   }
+  ]
+ },
+ "reliable_eight": {
+  "methods": [
+   "pauli2025",
+   "elaraby2024",
+   "bozdag2025",
+   "ju2025",
+   "liu2025",
+   "openai2024_makemepay",
+   "openai2024_makemesay",
+   "ahnert2025"
+  ],
+  "api_arm": {
+   "mean_rho": 0.003489066135637847,
+   "ci": {
+    "lo": -0.1602934864273885,
+    "hi": 0.18511016158966692,
+    "n": 500
+   }
+  },
+  "local_arm": {
+   "mean_rho": 0.35301688716692187
+  },
+  "local_subsets": {
+   "all": {
+    "n": 252,
+    "median": 0.4080101485613527,
+    "min": -0.0565596458545172,
+    "max": 0.7505353022683271,
+    "share_at_or_below_api": 0.011904761904761904
+   },
+   "capability_matched": {
+    "n": 6,
+    "median": 0.19492999048912435,
+    "min": 0.004433871274683859,
+    "max": 0.2862694952005149,
+    "share_at_or_below_api": 0.0
+   }
+  },
+  "capability_windows": [
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b"
+    ],
+    "mean_C": -1.1277632039813235,
+    "mean_rho": 0.5859888666385532
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b"
+    ],
+    "mean_C": -0.6878796510178945,
+    "mean_rho": 0.5892942939458017
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_C": -0.37211045104915896,
+    "mean_rho": 0.5744015147243294
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "qwen3-32b"
+    ],
+    "mean_C": -0.0712570182121044,
+    "mean_rho": 0.6518281377535389
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "qwen3-32b",
+     "mistral-medium-3.5"
+    ],
+    "mean_C": 0.11864290326447338,
+    "mean_rho": 0.09985399974478941
+   },
+   {
+    "models": [
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "qwen3-32b",
+     "mistral-medium-3.5",
+     "gpt-oss-120b"
+    ],
+    "mean_C": 0.22791269563817615,
+    "mean_rho": 0.14764054701597257
+   },
+   {
+    "models": [
+     "exaone-4.0.1-32b",
+     "qwen3-32b",
+     "mistral-medium-3.5",
+     "gpt-oss-120b",
+     "llama-3.3-70b"
+    ],
+    "mean_C": 0.3033492547593486,
+    "mean_rho": 0.028490233263809707
+   },
+   {
+    "models": [
+     "qwen3-32b",
+     "mistral-medium-3.5",
+     "gpt-oss-120b",
+     "llama-3.3-70b",
+     "kimi-k2.6"
+    ],
+    "mean_C": 0.4288077346830336,
+    "mean_rho": 0.11319433531167951
+   },
+   {
+    "models": [
+     "mistral-medium-3.5",
+     "gpt-oss-120b",
+     "llama-3.3-70b",
+     "kimi-k2.6",
+     "claude-fable-5.1"
+    ],
+    "mean_C": 0.582397589387638,
+    "mean_rho": 0.16654484698690844
+   },
+   {
+    "models": [
+     "gpt-oss-120b",
+     "llama-3.3-70b",
+     "kimi-k2.6",
+     "claude-fable-5.1",
+     "gpt-5.6-sol"
+    ],
+    "mean_C": 0.7383788297988574,
+    "mean_rho": 0.06842421944550414
+   },
+   {
+    "models": [
+     "llama-3.3-70b",
+     "kimi-k2.6",
+     "claude-fable-5.1",
+     "gpt-5.6-sol",
+     "deepseek-v4-flash"
+    ],
+    "mean_C": 0.8998505083431475,
+    "mean_rho": -0.049135431796449816
+   }
+  ],
+  "subsets": [
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b"
+    ],
+    "mean_rho": 0.5859888666385532,
+    "capability_sd": 0.7577611562258287
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.7089656951504595,
+    "capability_sd": 0.8805816845924495
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5468787458867412,
+    "capability_sd": 0.9533281287437586
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.511339509412479,
+    "capability_sd": 0.9043732388553558
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6616103700179808,
+    "capability_sd": 0.9833614792559972
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3764896837288087,
+    "capability_sd": 0.9641772216892813
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.6461083987419288,
+    "capability_sd": 0.8330782536881732
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.28211454438709593,
+    "capability_sd": 0.9282551821856708
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.11680503334786721,
+    "capability_sd": 0.8650140367520557
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.35715039070956583,
+    "capability_sd": 0.9657873505472696
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.058191550963716976,
+    "capability_sd": 0.9419091266131303
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6234881562053912,
+    "capability_sd": 0.9936705494998819
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5319085434708485,
+    "capability_sd": 0.9490285180706305
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5933896867827255,
+    "capability_sd": 1.0213326710394832
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3941800441904561,
+    "capability_sd": 1.0036413632792673
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.29461309451650375,
+    "capability_sd": 1.0124539877413585
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.39389942208317497,
+    "capability_sd": 1.0769295637669754
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.17475116647798764,
+    "capability_sd": 1.0610121731778706
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.34443961823442326,
+    "capability_sd": 1.0391484990197974
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": -0.029690300708598866,
+    "capability_sd": 1.0220673660643151
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.22910537950587828,
+    "capability_sd": 1.0854788523267234
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.5892942939458017,
+    "capability_sd": 0.6330264179885348
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5646402439338639,
+    "capability_sd": 0.717331478935428
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.40111114283121324,
+    "capability_sd": 0.6606544074670696
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.49207603109284653,
+    "capability_sd": 0.751892250644679
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3669325376584256,
+    "capability_sd": 0.7298372126620439
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6069808539078587,
+    "capability_sd": 0.5904024687188962
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5744015147243294,
+    "capability_sd": 0.5451213049842664
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5493303755958551,
+    "capability_sd": 0.6196808224754791
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4408496474685706,
+    "capability_sd": 0.600876598798033
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4995669131137089,
+    "capability_sd": 0.606439514414808
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.486858133854215,
+    "capability_sd": 0.6684795288117993
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.36498556944118654,
+    "capability_sd": 0.6524624363467451
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4931513601966014,
+    "capability_sd": 0.6342124195020611
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3150089449957906,
+    "capability_sd": 0.6163524112843172
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4063989028350717,
+    "capability_sd": 0.6766939638756311
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5006247817284257,
+    "capability_sd": 0.7591697964524153
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.36960009039558644,
+    "capability_sd": 0.7088413844746001
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4076107739249615,
+    "capability_sd": 0.7903735015245741
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.31102210063473307,
+    "capability_sd": 0.7704208703893599
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.27354890722338926,
+    "capability_sd": 0.7792917582727298
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.31047005465448974,
+    "capability_sd": 0.8495756112794147
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.21720278011235025,
+    "capability_sd": 0.8321242395603875
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.25830120122144934,
+    "capability_sd": 0.8091195204114705
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": -0.0565596458545172,
+    "capability_sd": 0.7900309997312123
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2467063934452119,
+    "capability_sd": 0.858813417080935
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5558086860082697,
+    "capability_sd": 0.6264902073358852
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5442001128766139,
+    "capability_sd": 0.6818668702752976
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3909615916347761,
+    "capability_sd": 0.6673248267482763
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5474685313257692,
+    "capability_sd": 0.6515523574153748
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.34265489231593316,
+    "capability_sd": 0.6353920219135336
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.37625625030259496,
+    "capability_sd": 0.6892778107958955
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.43752481620060824,
+    "capability_sd": 0.6916491628837071
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2005270459813986,
+    "capability_sd": 0.6777721569520601
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2999499603582681,
+    "capability_sd": 0.7231907679750221
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen2.5-7b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.353181527553496,
+    "capability_sd": 0.6987015346575993
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.7505353022683271,
+    "capability_sd": 0.9093871645641071
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.7130671815079324,
+    "capability_sd": 0.9914496798109675
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5377954669309014,
+    "capability_sd": 0.9365953704124759
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6426669251674656,
+    "capability_sd": 1.0245298331678274
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4655855421105759,
+    "capability_sd": 1.0034425164179108
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6970120462139702,
+    "capability_sd": 1.0225060724966724
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6824935120324447,
+    "capability_sd": 0.9830765256162862
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6679209644809089,
+    "capability_sd": 1.0473105177132915
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5451746805961902,
+    "capability_sd": 1.0314178542421695
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5556682082112099,
+    "capability_sd": 1.0388438527693842
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.613342442737688,
+    "capability_sd": 1.0962961857693714
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4661507845622527,
+    "capability_sd": 1.0819532252519004
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6156478912020636,
+    "capability_sd": 1.0628097028111483
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4407884927442487,
+    "capability_sd": 1.0474466432865626
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5306495834142266,
+    "capability_sd": 1.1039663387445138
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5971019952010358,
+    "capability_sd": 1.0396490476522509
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5616044329764471,
+    "capability_sd": 0.9896090620186008
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5477195130619874,
+    "capability_sd": 1.07010889160713
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4712518456847445,
+    "capability_sd": 1.0506694008170958
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.3262292477859828,
+    "capability_sd": 1.0612780406285152
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.45893239506309524,
+    "capability_sd": 1.1332991374691175
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.23101073901320696,
+    "capability_sd": 1.1157661359213409
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.42273138918121966,
+    "capability_sd": 1.0906884242831125
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.07104679729334741,
+    "capability_sd": 1.0719099427601284
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.38875689141406267,
+    "capability_sd": 1.1427927243857097
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6262472362141471,
+    "capability_sd": 1.0677270209158702
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6282214655071787,
+    "capability_sd": 1.1207436017145516
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4492432324548671,
+    "capability_sd": 1.1074119923032824
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6353288720205954,
+    "capability_sd": 1.0899462790915175
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.41941813274311013,
+    "capability_sd": 1.0756860799790582
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.47120351932017424,
+    "capability_sd": 1.127853803603944
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4753712151202255,
+    "capability_sd": 1.133131249720294
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.19644064944323164,
+    "capability_sd": 1.1202223286525863
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3133252468074103,
+    "capability_sd": 1.1670906719084144
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.44581775659547224,
+    "capability_sd": 1.1400079863540662
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5897587248922663,
+    "capability_sd": 0.7772170666216103
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4955921507130508,
+    "capability_sd": 0.7333692909465501
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5364576123923671,
+    "capability_sd": 0.8049964279085834
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.42608606526817805,
+    "capability_sd": 0.7871881623532455
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4766450032659074,
+    "capability_sd": 0.7943671689516679
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.47637265439714355,
+    "capability_sd": 0.8564209492714793
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.40955485464328456,
+    "capability_sd": 0.8407715394317539
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5427801448522511,
+    "capability_sd": 0.8209746288031302
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.46944490856502014,
+    "capability_sd": 0.8039041185042316
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.46156433939942865,
+    "capability_sd": 0.8646547895222604
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6336095398890438,
+    "capability_sd": 0.594168542999965
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4116819156276586,
+    "capability_sd": 0.6429955480839317
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.39309880766363076,
+    "capability_sd": 0.629770735153326
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5308503171128977,
+    "capability_sd": 0.6169830956254291
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.41575312707444245,
+    "capability_sd": 0.6022114211218441
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.49820391450127777,
+    "capability_sd": 0.6496106858323609
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.41082610470191594,
+    "capability_sd": 0.6502886869603723
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.34931280894350364,
+    "capability_sd": 0.6376988450629167
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.36551036386247393,
+    "capability_sd": 0.6769373498435565
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.45038879825000755,
+    "capability_sd": 0.6565591694730024
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.40840952319774393,
+    "capability_sd": 0.821639415528504
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3255136436919608,
+    "capability_sd": 0.8780008117805401
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3312487331332861,
+    "capability_sd": 0.8636336085789906
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.39408640377399873,
+    "capability_sd": 0.8459583070925853
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3286595168870959,
+    "capability_sd": 0.8303286055298128
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.37885018569336953,
+    "capability_sd": 0.8855326755977411
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2680441802104879,
+    "capability_sd": 0.8899890910073431
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2680395640140415,
+    "capability_sd": 0.8761704760479473
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.24840269174865312,
+    "capability_sd": 0.9244707354421434
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.33271658873797155,
+    "capability_sd": 0.8972218647105534
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.48672445549289206,
+    "capability_sd": 0.6505772249280249
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3831219393316871,
+    "capability_sd": 0.6391970051662359
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.38352435104358484,
+    "capability_sd": 0.6734342010372035
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.43073500873041,
+    "capability_sd": 0.6561683652819355
+   },
+   {
+    "models": [
+     "llama-3.2-3b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.29116511046265725,
+    "capability_sd": 0.6766125829675622
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b"
+    ],
+    "mean_rho": 0.6638524712210638,
+    "capability_sd": 0.9136896297220023
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.628395405773681,
+    "capability_sd": 0.9875230806293134
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4010692948585204,
+    "capability_sd": 0.9379170783847504
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5097805773369708,
+    "capability_sd": 1.017838774566431
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3529226548730221,
+    "capability_sd": 0.9984826500595002
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.7114020583433076,
+    "capability_sd": 0.9762573865315093
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6531400213269671,
+    "capability_sd": 0.9403443319082192
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6442553863467193,
+    "capability_sd": 0.9992618084162447
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5757498683294427,
+    "capability_sd": 0.9844917257400784
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5109980822404481,
+    "capability_sd": 0.9906514021398344
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5252463825892364,
+    "capability_sd": 1.0430320277775027
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4186526893793183,
+    "capability_sd": 1.029761910552581
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.46313431855812986,
+    "capability_sd": 1.0128490209779848
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3169882859445128,
+    "capability_sd": 0.9985887402697687
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3514885796018373,
+    "capability_sd": 1.0500635755298522
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.663810498931707,
+    "capability_sd": 1.029425211088064
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.49625067419990765,
+    "capability_sd": 0.9840835378351633
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4989074475608113,
+    "capability_sd": 1.0573950007531583
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4355141815942515,
+    "capability_sd": 1.0395160721649388
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.3947717417964636,
+    "capability_sd": 1.0487092238174949
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2794519089444885,
+    "capability_sd": 1.1143176053083488
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.24807267366512678,
+    "capability_sd": 1.098183585442554
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.21712971412956564,
+    "capability_sd": 1.0757259038651203
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": -0.008501952741195562,
+    "capability_sd": 1.0584480306203081
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.16707098383260133,
+    "capability_sd": 1.1230108427602976
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6580501620838772,
+    "capability_sd": 1.0143231226191656
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.6369123540942433,
+    "capability_sd": 1.0624186842212517
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5591324693494207,
+    "capability_sd": 1.0501261292102826
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5977267113327206,
+    "capability_sd": 1.0348421724944914
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4884182595634495,
+    "capability_sd": 1.021641962765392
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4470999912365617,
+    "capability_sd": 1.068907289543199
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.3362277163873027,
+    "capability_sd": 1.072980662710706
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.24966541879548038,
+    "capability_sd": 1.0611010629647812
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2092107344003712,
+    "capability_sd": 1.1031749048002746
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-7b-v0.2",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.22121921918744547,
+    "capability_sd": 1.079240767366521
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.5764423434442448,
+    "capability_sd": 0.6862004942932349
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.4567353205739858,
+    "capability_sd": 0.6441144754569553
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.36725859666589533,
+    "capability_sd": 0.7133926152180278
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.40198932289991174,
+    "capability_sd": 0.6959247834398865
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.3602823825375013,
+    "capability_sd": 0.7017533630049709
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2913279780779926,
+    "capability_sd": 0.7607576878637871
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.29168693528341194,
+    "capability_sd": 0.7456061464110729
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.18844458725708324,
+    "capability_sd": 0.7276970175152533
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.17263474386596675,
+    "capability_sd": 0.711014603693172
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.13032180259795098,
+    "capability_sd": 0.7686121739037003
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.6518281377535389,
+    "capability_sd": 0.360285012396607
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.43878397758703247,
+    "capability_sd": 0.417215941012532
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4693671511710966,
+    "capability_sd": 0.40121487034943387
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4861313662557453,
+    "capability_sd": 0.3892842120303853
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4111610959588993,
+    "capability_sd": 0.3704982860053567
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3462563854536104,
+    "capability_sd": 0.42480732251598635
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.16508156714153852,
+    "capability_sd": 0.4220605129930797
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.08263038328160403,
+    "capability_sd": 0.4070084077616207
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12559054370075734,
+    "capability_sd": 0.44843844228565444
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1583340517840823,
+    "capability_sd": 0.4291514823402211
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.505932986979291,
+    "capability_sd": 0.7232887862338624
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.41237984669292427,
+    "capability_sd": 0.7764004112191174
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3995358299837889,
+    "capability_sd": 0.7625690196145081
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.350674896332564,
+    "capability_sd": 0.7468639911404512
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3338838459618035,
+    "capability_sd": 0.7316708849196543
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2671076018087315,
+    "capability_sd": 0.7835315208347494
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.1765118816615144,
+    "capability_sd": 0.7865281869241075
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.15021242815872218,
+    "capability_sd": 0.7732768175542758
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12461907896150436,
+    "capability_sd": 0.8177929493887892
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.055603491272582406,
+    "capability_sd": 0.7933438301046548
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.562349851008897,
+    "capability_sd": 0.4063584397985601
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4844004715301484,
+    "capability_sd": 0.39266473507139704
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3337789867681003,
+    "capability_sd": 0.42776540275496444
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.40160428668160225,
+    "capability_sd": 0.4126435885042097
+   },
+   {
+    "models": [
+     "qwen2.5-7b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1384550391794178,
+    "capability_sd": 0.426506785124992
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b"
+    ],
+    "mean_rho": 0.6923996574812139,
+    "capability_sd": 1.062390694883527
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5888905273224123,
+    "capability_sd": 1.0222646196297946
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5182332200524746,
+    "capability_sd": 1.087494045593002
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5065200754113613,
+    "capability_sd": 1.0714199383322593
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.49241275518224137,
+    "capability_sd": 1.0792333970302612
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.4451619533430171,
+    "capability_sd": 1.1378101700721008
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.40993074389170053,
+    "capability_sd": 1.123255693659752
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.40252866581145785,
+    "capability_sd": 1.1035131615087692
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.34456463993090086,
+    "capability_sd": 1.0879591992739779
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.31823990825731874,
+    "capability_sd": 1.1456224976805605
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.7114930555720632,
+    "capability_sd": 1.0151984088009276
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.47008114442970234,
+    "capability_sd": 1.0575747922526528
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4925576808344973,
+    "capability_sd": 1.0465580615810164
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5909514683164604,
+    "capability_sd": 1.0335744396782574
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.5028122533609738,
+    "capability_sd": 1.0217230587837611
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.46651196846964416,
+    "capability_sd": 1.063335822249818
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.34252612468791693,
+    "capability_sd": 1.066308796255155
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.299046427007859,
+    "capability_sd": 1.055675291284786
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.22921879472007511,
+    "capability_sd": 1.092457913999029
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3450945047444993,
+    "capability_sd": 1.0718567427511807
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.5522582135344046,
+    "capability_sd": 1.1097553588883424
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.42781050442175284,
+    "capability_sd": 1.1639504575066377
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4484753176615429,
+    "capability_sd": 1.1503954463409358
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.458362529881674,
+    "capability_sd": 1.132310697246024
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.41545426365214727,
+    "capability_sd": 1.1178457326358031
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3899626800844528,
+    "capability_sd": 1.1712092993882597
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.16781981972276325,
+    "capability_sd": 1.1769000511448233
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2513397580505461,
+    "capability_sd": 1.1637608355769946
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.16554223125459938,
+    "capability_sd": 1.2119159767182575
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2119839582798916,
+    "capability_sd": 1.1839290874739554
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.5521556529325837,
+    "capability_sd": 1.0770932640452753
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4587167772408707,
+    "capability_sd": 1.0672878788416496
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.33482139126303756,
+    "capability_sd": 1.1006697245980246
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.4758206520408577,
+    "capability_sd": 1.08217556747186
+   },
+   {
+    "models": [
+     "mistral-7b-v0.2",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.17993536434269414,
+    "capability_sd": 1.1067441950062793
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b"
+    ],
+    "mean_rho": 0.3983035317544409,
+    "capability_sd": 0.7032162980881631
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.1550098898680503,
+    "capability_sd": 0.749745730644841
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3077947974587942,
+    "capability_sd": 0.737306232266486
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2542854621437773,
+    "capability_sd": 0.7244126607800796
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2824202643508321,
+    "capability_sd": 0.7107025214951458
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1808790677512114,
+    "capability_sd": 0.7560634912729546
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.11367101251385273,
+    "capability_sd": 0.7575906656627058
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.1761118931192793,
+    "capability_sd": 0.7456956301496102
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.02389964067766532,
+    "capability_sd": 0.7841204070811801
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "mistral-nemo-12b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12593678303582903,
+    "capability_sd": 0.7636103438623283
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.2010952703121362,
+    "capability_sd": 0.2393051033202461
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2862694952005149,
+    "capability_sd": 0.22161510199555814
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.08804813172427498,
+    "capability_sd": 0.2566426845474337
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.18876471066611247,
+    "capability_sd": 0.24658422218079376
+   },
+   {
+    "models": [
+     "gemma-3-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.004433871274683859,
+    "capability_sd": 0.24654863879048053
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b"
+    ],
+    "mean_rho": 0.251175624930992,
+    "capability_sd": 0.7617655521644712
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.3365542436682416,
+    "capability_sd": 0.7509612225687199
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "qwen3-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.12616520767301653,
+    "capability_sd": 0.784908944319868
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "gemma-3-27b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.2158170685141803,
+    "capability_sd": 0.7671737276458358
+   },
+   {
+    "models": [
+     "mistral-nemo-12b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.0351799364969775,
+    "capability_sd": 0.7891551620074186
+   },
+   {
+    "models": [
+     "gemma-3-27b",
+     "qwen3-32b",
+     "exaone-4.0.1-32b",
+     "llama-3.3-70b",
+     "gpt-oss-120b"
+    ],
+    "mean_rho": 0.22114674319888003,
+    "capability_sd": 0.15801973114706921
+   }
+  ]
+ }
+}

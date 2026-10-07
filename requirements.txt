@@ -1,0 +1,10 @@
+openai>=1.40.0          # OpenAI, DeepSeek, Moonshot, Mistral and local vLLM
+anthropic>=1.0.0        # Anthropic models
+pyyaml>=6.0             # config/ files
+python-dotenv>=1.0.0    # loads .env
+datasets>=2.19.0        # pauli2025 and amayuelas2024 items from HuggingFace
+nltk>=3.8.0             # openai2024_makemesay codeword lemmatiser
+pandas>=2.0             # imported by amayuelas2024's upstream advers.py
+transformers>=4.40.0    # pauli2025's DeBERTaV3 scorer (CPU)
+torch>=2.2.0            # pauli2025's DeBERTaV3 scorer (CPU)
+# Local vLLM serving uses its own env (vLLM 0.10.1.1, transformers 4.57.6), not these versions.

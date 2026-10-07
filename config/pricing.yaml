@@ -1,0 +1,34 @@
+# Provider rates and throughput figures, used only for cost planning (core/schedule.py).
+
+sources:
+  openai: https://developers.openai.com/api/docs/pricing
+  anthropic: https://platform.claude.com/docs/en/about-claude/pricing
+  deepseek: https://api-docs.deepseek.com/quick_start/pricing/
+  moonshot: https://platform.kimi.ai/docs/pricing/chat-k26
+  mistral: https://mistral.ai/pricing/api
+retrieved: 2026-09-09
+
+api:
+  gpt-4.1-mini:      {input: 0.40,  output: 1.60}    # persuadee, 8 methods
+  gpt-4o:            {input: 2.50,  output: 10.00}   # judge, 2 methods
+
+  gpt-5.6-sol:       {input: 4.00,  output: 20.00}
+  claude-fable-5.1:  {input: 10.00, output: 50.00}   # by far the most expensive of the fifteen
+  mistral-medium-3.5: {input: 1.50, output: 7.50}    # id mistral-medium-2604
+  kimi-k2.6:         {input: 0.95,  output: 4.00}
+  deepseek-v4-flash: {input: 0.44,  output: 1.32}    # PEAK rate - see deepseek_offpeak below
+
+  gpt-4o-mini:       {input: 0.15,  output: 0.60}
+  gpt-4.1-nano:      {input: 0.10,  output: 0.40}
+
+local:
+  tokens_per_second_by_size:
+    3B:   120
+    7B:   100
+    12B:   85
+    27B:   60
+    32B:   55
+    33B:   55
+    70B:   35
+    120B:  75
+    128B:  22

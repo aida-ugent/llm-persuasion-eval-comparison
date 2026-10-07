@@ -1,0 +1,16 @@
+model,mmlu_pro_300,ifeval_prompt_strict,source
+claude-fable-5.1,0.9166666666666666,0.933456561922366,analysis/capability/claude-fable-5.1/claude-fable-5-1/results_2026-09-16T11-47-06.165856.json
+deepseek-v4-flash,0.9066666666666666,0.9611829944547134,analysis/capability/deepseek-v4-flash/deepseek-v4-flash/results_2026-09-15T18-55-32.917366.json
+exaone-4.0.1-32b,0.7,0.8280961182994455,analysis/capability/exaone-4.0.1-32b/LGAI-EXAONE__EXAONE-4.0.1-32B/results_2026-09-15T15-54-42.025304.json
+gemma-3-12b,0.58,0.822550831792976,analysis/capability/gemma-3-12b/google__gemma-3-12b-it/results_2026-09-15T13-42-48.084417.json
+gemma-3-27b,0.65,0.8373382624768947,analysis/capability/gemma-3-27b/google__gemma-3-27b-it/results_2026-09-15T14-36-01.715142.json
+gpt-5.6-sol,0.9166666666666666,0.9408502772643254,analysis/capability/gpt-5.6-sol/gpt-5.6-sol/results_2026-09-16T06-53-51.267943.json
+gpt-oss-120b,0.7633333333333333,0.8428835489833642,analysis/capability/gpt-oss-120b/openai__gpt-oss-120b/results_2026-09-15T18-13-44.780801.json
+kimi-k2.6,0.8266666666666667,0.9094269870609981,analysis/capability/kimi-k2.6/kimi-k2.6/results_2026-09-17T05-55-56.548307.json
+llama-3.2-3b,0.37666666666666665,0.6950092421441775,analysis/capability/llama-3.2-3b/meta-llama__Llama-3.2-3B-Instruct/results_2026-09-15T12-35-19.426522.json
+llama-3.3-70b,0.7033333333333334,0.9020332717190388,analysis/capability/llama-3.3-70b/meta-llama__Llama-3.3-70B-Instruct/results_2026-09-15T20-00-48.091505.json
+mistral-7b-v0.2,0.29333333333333333,0.49168207024029575,analysis/capability/mistral-7b-v0.2/mistralai__Mistral-7B-Instruct-v0.2/results_2026-09-15T13-09-40.286253.json
+mistral-medium-3.5,0.7733333333333333,0.8299445471349353,analysis/capability/mistral-medium-3.5/mistral-medium-2604/results_2026-09-17T06-35-13.698433.json
+mistral-nemo-12b,0.44333333333333336,0.5804066543438078,analysis/capability/mistral-nemo-12b/mistralai__Mistral-Nemo-Instruct-2407/results_2026-09-15T14-01-35.928703.json
+qwen2.5-7b,0.58,0.7079482439926063,analysis/capability/qwen2.5-7b/Qwen__Qwen2.5-7B-Instruct/results_2026-09-15T12-52-55.471725.json
+qwen3-32b,0.7833333333333333,0.8188539741219963,analysis/capability/qwen3-32b/Qwen__Qwen3-32B/results_2026-09-15T15-29-29.564966.json
